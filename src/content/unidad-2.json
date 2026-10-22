@@ -1,0 +1,861 @@
+{
+  "unidad": 2,
+  "titulo": "Multiplicar y dividir",
+  "descripcion": "Tablas, multiplicaciones y divisiones para repartir. Y problemas con dinero de la vida diaria.",
+  "fueraDelMaterial": false,
+  "cofreDespuesDe": 2,
+  "lecciones": [
+    {
+      "id": "u2-l1",
+      "numero": 1,
+      "titulo": "Multiplicar",
+      "objetivo": "Multiplicar números de hasta 3 cifras por un número de 1 cifra.",
+      "tipoNodo": "leccion",
+      "guia": [
+        {
+          "titulo": "Multiplicar es sumar repetido",
+          "texto": "3 × 4 significa juntar 3 grupos de 4. Es lo mismo que sumar 4 + 4 + 4, que da 12.",
+          "ejemplo": "3 bolsas con 4 manzanas cada una = 12 manzanas",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 4 y OA 5",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "El 0, el 1 y el 10",
+          "texto": "Todo número por 1 da el mismo número. Todo número por 0 da 0. Y para multiplicar por 10, agregas un cero al final.",
+          "ejemplo": "25 × 1 = 25 · 25 × 0 = 0 · 25 × 10 = 250",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 4 y OA 5",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Números más grandes",
+          "texto": "Para multiplicar 123 × 3, descompón el 123: calcula 100 × 3, 20 × 3 y 3 × 3. Después suma todo.",
+          "ejemplo": "300 + 60 + 9 = 369",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 4 y OA 5",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        }
+      ],
+      "ejercicios": [
+        {
+          "id": "u2-l1-e01",
+          "unidad": 2,
+          "leccion": 1,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "multiplicacion",
+          "enunciado": "¿Cuánto es 6 × 7?",
+          "opciones": [
+            "42",
+            "36",
+            "48",
+            "13"
+          ],
+          "respuesta": 0,
+          "explicacion": "6 × 7 = 42. Es como sumar el 7 seis veces: 7 + 7 + 7 + 7 + 7 + 7 = 42.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 5",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l1-e02",
+          "unidad": 2,
+          "leccion": 1,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "multiplicacion",
+          "enunciado": "Cualquier número multiplicado por 0 da 0.",
+          "respuesta": true,
+          "explicacion": "Verdadero. Si tienes 0 grupos, no tienes nada. Por ejemplo, 58 × 0 = 0.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 5",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l1-e03",
+          "unidad": 2,
+          "leccion": 1,
+          "tipo": "completar",
+          "dificultad": 1,
+          "concepto": "multiplicacion",
+          "enunciado": "4 + 4 + 4 + 4 + 4 = 5 × ___",
+          "respuesta": "4",
+          "banco": [
+            "4",
+            "5",
+            "20"
+          ],
+          "explicacion": "Sumar 5 veces el 4 es lo mismo que 5 × 4. Las dos cuentas dan 20.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 5",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l1-e04",
+          "unidad": 2,
+          "leccion": 1,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "multiplicacion",
+          "enunciado": "¿Cuánto es 34 × 10?",
+          "opciones": [
+            "340",
+            "3.400",
+            "44",
+            "304"
+          ],
+          "respuesta": 0,
+          "explicacion": "Para multiplicar por 10, se agrega un cero al final: 34 × 10 = 340.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 5",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l1-e05",
+          "unidad": 2,
+          "leccion": 1,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "multiplicacion",
+          "enunciado": "8 × 1 = 9",
+          "respuesta": false,
+          "explicacion": "Falso. Todo número multiplicado por 1 da el mismo número: 8 × 1 = 8.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 5",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l1-e06",
+          "unidad": 2,
+          "leccion": 1,
+          "tipo": "unir_pares",
+          "dificultad": 2,
+          "concepto": "multiplicacion",
+          "enunciado": "Une cada multiplicación con su resultado.",
+          "pares": [
+            {
+              "a": "7 × 8",
+              "b": "56"
+            },
+            {
+              "a": "9 × 6",
+              "b": "54"
+            },
+            {
+              "a": "6 × 8",
+              "b": "48"
+            },
+            {
+              "a": "7 × 7",
+              "b": "49"
+            }
+          ],
+          "explicacion": "7 × 8 = 56, 9 × 6 = 54, 6 × 8 = 48 y 7 × 7 = 49. ¡Repasa las tablas del 6 al 9!",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 5",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l1-e07",
+          "unidad": 2,
+          "leccion": 1,
+          "tipo": "seleccion_multiple",
+          "dificultad": 2,
+          "concepto": "multiplicacion",
+          "enunciado": "¿Cuánto es 213 × 3?",
+          "opciones": [
+            "639",
+            "693",
+            "216",
+            "609"
+          ],
+          "respuesta": 0,
+          "explicacion": "Descompón: 200 × 3 = 600, 10 × 3 = 30 y 3 × 3 = 9. Luego, 600 + 30 + 9 = 639.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 5",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l1-e08",
+          "unidad": 2,
+          "leccion": 1,
+          "tipo": "identificar_error",
+          "dificultad": 2,
+          "concepto": "multiplicacion",
+          "enunciado": "Toca la parte que está equivocada.",
+          "respuesta": 2,
+          "segmentos": [
+            "Para calcular 142 × 2, ",
+            "hago 100 × 2 = 200, 40 × 2 = 80 ",
+            "y 2 × 2 = 6."
+          ],
+          "correccion": "y 2 × 2 = 4.",
+          "explicacion": "2 × 2 = 4, no 6. Entonces 142 × 2 = 200 + 80 + 4 = 284.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 5",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l1-e09",
+          "unidad": 2,
+          "leccion": 1,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "multiplicacion",
+          "caso": "Para el paseo de curso van 4 buses. En cada bus viajan 38 personas.",
+          "enunciado": "¿Cuántas personas van al paseo?",
+          "opciones": [
+            "152",
+            "42",
+            "122",
+            "132"
+          ],
+          "respuesta": 0,
+          "explicacion": "Hay que calcular 38 × 4: 30 × 4 = 120 y 8 × 4 = 32. Luego, 120 + 32 = 152 personas.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 5",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l1-e10",
+          "unidad": 2,
+          "leccion": 1,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "multiplicacion",
+          "caso": "Una caja trae 12 lápices de colores. La profe compró 5 cajas para el curso.",
+          "enunciado": "¿Cuántos lápices compró?",
+          "opciones": [
+            "60",
+            "17",
+            "50",
+            "72"
+          ],
+          "respuesta": 0,
+          "explicacion": "12 × 5 = 60. También puedes pensar 10 × 5 = 50 y 2 × 5 = 10. Luego, 50 + 10 = 60 lápices.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 5",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        }
+      ]
+    },
+    {
+      "id": "u2-l2",
+      "numero": 2,
+      "titulo": "Dividir",
+      "objetivo": "Repartir en partes iguales y saber qué hacer con lo que sobra.",
+      "tipoNodo": "leccion",
+      "guia": [
+        {
+          "titulo": "Dividir es repartir",
+          "texto": "Dividir es repartir en partes iguales. Se escribe con el signo : o con ÷. 12 : 3 = 4, porque 3 grupos de 4 son 12.",
+          "ejemplo": "12 dulces entre 3 amigos: 4 dulces para cada uno",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 4 y OA 6",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Multiplicar y dividir son amigos",
+          "texto": "Para dividir puedes usar las tablas de multiplicar. Si 6 × 5 = 30, entonces 30 : 5 = 6 y 30 : 6 = 5.",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 4 y OA 6",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Cuando sobra",
+          "texto": "A veces el reparto no es exacto. Lo que sobra se llama resto, y siempre es menor que el número por el que divides.",
+          "ejemplo": "17 : 5 = 3 y sobran 2",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 4 y OA 6",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        }
+      ],
+      "ejercicios": [
+        {
+          "id": "u2-l2-e01",
+          "unidad": 2,
+          "leccion": 2,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "division",
+          "enunciado": "¿Cuánto es 20 : 4?",
+          "opciones": [
+            "5",
+            "4",
+            "16",
+            "80"
+          ],
+          "respuesta": 0,
+          "explicacion": "20 : 4 = 5, porque 4 × 5 = 20.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 6",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l2-e02",
+          "unidad": 2,
+          "leccion": 2,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "division",
+          "enunciado": "Dividir es repartir en partes iguales.",
+          "respuesta": true,
+          "explicacion": "Verdadero. Al dividir, cada grupo recibe la misma cantidad.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 6",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l2-e03",
+          "unidad": 2,
+          "leccion": 2,
+          "tipo": "completar",
+          "dificultad": 1,
+          "concepto": "division",
+          "enunciado": "Si 7 × 3 = 21, entonces 21 : 3 = ___",
+          "respuesta": "7",
+          "banco": [
+            "7",
+            "3",
+            "24"
+          ],
+          "explicacion": "Multiplicar y dividir están relacionados: si 7 × 3 = 21, entonces 21 : 3 = 7.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 6",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l2-e04",
+          "unidad": 2,
+          "leccion": 2,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "division",
+          "enunciado": "Reparto 18 galletas entre 2 amigos por igual. ¿Cuántas recibe cada uno?",
+          "opciones": [
+            "9",
+            "8",
+            "16",
+            "36"
+          ],
+          "respuesta": 0,
+          "explicacion": "18 : 2 = 9. Cada amigo recibe 9 galletas, porque 9 + 9 = 18.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 6",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l2-e05",
+          "unidad": 2,
+          "leccion": 2,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "division",
+          "enunciado": "Cualquier número dividido por 1 da el mismo número.",
+          "respuesta": true,
+          "explicacion": "Verdadero. Si repartes todo en un solo grupo, ese grupo se queda con todo. Por ejemplo, 45 : 1 = 45.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 6",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l2-e06",
+          "unidad": 2,
+          "leccion": 2,
+          "tipo": "unir_pares",
+          "dificultad": 2,
+          "concepto": "division",
+          "enunciado": "Une cada división con su resultado.",
+          "pares": [
+            {
+              "a": "36 : 4",
+              "b": "9"
+            },
+            {
+              "a": "42 : 6",
+              "b": "7"
+            },
+            {
+              "a": "40 : 5",
+              "b": "8"
+            },
+            {
+              "a": "18 : 3",
+              "b": "6"
+            }
+          ],
+          "explicacion": "36 : 4 = 9, 42 : 6 = 7, 40 : 5 = 8 y 18 : 3 = 6. Puedes comprobarlo con las tablas.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 6",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l2-e07",
+          "unidad": 2,
+          "leccion": 2,
+          "tipo": "seleccion_multiple",
+          "dificultad": 2,
+          "concepto": "division",
+          "enunciado": "¿Cuánto es 23 : 5?",
+          "opciones": [
+            "4 y sobran 3",
+            "5 y sobran 2",
+            "4 y sobran 2",
+            "3 y sobran 8"
+          ],
+          "respuesta": 0,
+          "explicacion": "5 × 4 = 20, y faltan 3 para llegar a 23. Entonces 23 : 5 = 4 y sobran 3.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 6",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l2-e08",
+          "unidad": 2,
+          "leccion": 2,
+          "tipo": "clasificar",
+          "dificultad": 2,
+          "concepto": "division",
+          "enunciado": "¿El reparto es exacto o sobra algo?",
+          "categorias": [
+            "Exacto",
+            "Sobra algo"
+          ],
+          "elementos": [
+            {
+              "texto": "24 : 6",
+              "categoria": 0
+            },
+            {
+              "texto": "25 : 6",
+              "categoria": 1
+            },
+            {
+              "texto": "35 : 7",
+              "categoria": 0
+            },
+            {
+              "texto": "30 : 4",
+              "categoria": 1
+            }
+          ],
+          "explicacion": "24 : 6 = 4 y 35 : 7 = 5 son exactas. En 25 : 6 sobra 1 y en 30 : 4 sobran 2.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 6",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l2-e09",
+          "unidad": 2,
+          "leccion": 2,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "division",
+          "caso": "En el curso hay 28 estudiantes. La profe quiere armar grupos de 4 para un trabajo.",
+          "enunciado": "¿Cuántos grupos puede armar?",
+          "opciones": [
+            "7",
+            "6",
+            "8",
+            "24"
+          ],
+          "respuesta": 0,
+          "explicacion": "28 : 4 = 7, porque 4 × 7 = 28. Se arman 7 grupos y no sobra nadie.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 6",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l2-e10",
+          "unidad": 2,
+          "leccion": 2,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "division",
+          "caso": "Lucas tiene 26 láminas y las quiere pegar en un álbum. En cada página caben 6 láminas.",
+          "enunciado": "¿Cuántas páginas llena y cuántas láminas le sobran?",
+          "opciones": [
+            "4 páginas y sobran 2",
+            "5 páginas y sobra 1",
+            "4 páginas y sobran 6",
+            "3 páginas y sobran 8"
+          ],
+          "respuesta": 0,
+          "explicacion": "6 × 4 = 24, y faltan 2 para llegar a 26. Llena 4 páginas y le sobran 2 láminas.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 4 y OA 6",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        }
+      ]
+    },
+    {
+      "id": "u2-l3",
+      "numero": 3,
+      "titulo": "Problemas con dinero",
+      "objetivo": "Elegir la operación correcta para resolver problemas con pesos chilenos.",
+      "tipoNodo": "caso_practico",
+      "guia": [
+        {
+          "titulo": "Lee con calma",
+          "texto": "Antes de calcular, pregúntate: ¿qué datos tengo? y ¿qué me piden? Subraya los datos importantes del problema.",
+          "ejemplo": "Datos: 3 jugos de $500. Me piden: cuánto pago.",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 3 y OA 7",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "¿Qué operación uso?",
+          "texto": "Si juntas o agregas, sumas. Si quitas o comparas, restas. Si se repite la misma cantidad, multiplicas. Si repartes, divides.",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 3 y OA 7",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "El vuelto",
+          "texto": "El vuelto es lo que te devuelven cuando pagas con más plata de la necesaria. Se calcula restando: lo que pagaste menos lo que cuesta.",
+          "ejemplo": "Pago con $1.000 algo de $700: el vuelto es $300.",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 3 y OA 7",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        }
+      ],
+      "ejercicios": [
+        {
+          "id": "u2-l3-e01",
+          "unidad": 2,
+          "leccion": 3,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "problemas-dinero",
+          "enunciado": "Un helado cuesta $800 y un jugo $500. ¿Cuánto cuestan juntos?",
+          "opciones": [
+            "$1.300",
+            "$300",
+            "$1.200",
+            "$13.000"
+          ],
+          "respuesta": 0,
+          "explicacion": "Juntar es sumar: $800 + $500 = $1.300.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 3 y OA 7",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l3-e02",
+          "unidad": 2,
+          "leccion": 3,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "problemas-dinero",
+          "enunciado": "Pago con $1.000 un pan de $600. ¿Cuánto es el vuelto?",
+          "opciones": [
+            "$400",
+            "$1.600",
+            "$600",
+            "$500"
+          ],
+          "respuesta": 0,
+          "explicacion": "El vuelto se calcula restando: $1.000 − $600 = $400.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 3 y OA 7",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l3-e03",
+          "unidad": 2,
+          "leccion": 3,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "problemas-dinero",
+          "enunciado": "Si compro 3 cuadernos de $900, puedo multiplicar para saber cuánto pago.",
+          "respuesta": true,
+          "explicacion": "Verdadero. Se repite el mismo precio 3 veces: 3 × $900 = $2.700.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 3 y OA 7",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l3-e04",
+          "unidad": 2,
+          "leccion": 3,
+          "tipo": "completar",
+          "dificultad": 1,
+          "concepto": "problemas-dinero",
+          "enunciado": "Para repartir $600 entre 3 hermanos en partes iguales, hay que ___.",
+          "respuesta": "dividir",
+          "banco": [
+            "dividir",
+            "sumar",
+            "multiplicar"
+          ],
+          "explicacion": "Repartir en partes iguales es dividir: $600 : 3 = $200 para cada hermano.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 3 y OA 7",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l3-e05",
+          "unidad": 2,
+          "leccion": 3,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "problemas-dinero",
+          "enunciado": "Si tengo $2.000 y gasto $500, me quedan $2.500.",
+          "respuesta": false,
+          "explicacion": "Falso. Al gastar, la plata disminuye, así que hay que restar: $2.000 − $500 = $1.500.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 3 y OA 7",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l3-e06",
+          "unidad": 2,
+          "leccion": 3,
+          "tipo": "unir_pares",
+          "dificultad": 2,
+          "concepto": "problemas-dinero",
+          "enunciado": "Une cada situación con la operación que necesita.",
+          "pares": [
+            {
+              "a": "Juntar los ahorros de dos semanas",
+              "b": "Suma"
+            },
+            {
+              "a": "Calcular el vuelto",
+              "b": "Resta"
+            },
+            {
+              "a": "Comprar 4 entradas iguales",
+              "b": "Multiplicación"
+            },
+            {
+              "a": "Repartir un premio en partes iguales",
+              "b": "División"
+            }
+          ],
+          "explicacion": "Juntar es sumar, el vuelto es restar, repetir una cantidad es multiplicar y repartir en partes iguales es dividir.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 3 y OA 7",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l3-e07",
+          "unidad": 2,
+          "leccion": 3,
+          "tipo": "seleccion_multiple",
+          "dificultad": 2,
+          "concepto": "problemas-dinero",
+          "enunciado": "Una entrada al cine cuesta $3.500. ¿Cuánto pagan 2 personas?",
+          "opciones": [
+            "$7.000",
+            "$5.500",
+            "$3.502",
+            "$6.000"
+          ],
+          "respuesta": 0,
+          "explicacion": "El precio se repite 2 veces: 2 × $3.500 = $7.000. También es $3.500 + $3.500.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 3 y OA 7",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l3-e08",
+          "unidad": 2,
+          "leccion": 3,
+          "tipo": "ordenar",
+          "dificultad": 2,
+          "concepto": "problemas-dinero",
+          "enunciado": "Ordena los pasos para resolver un problema.",
+          "pasos": [
+            "Leo el problema con calma",
+            "Busco los datos y lo que me piden",
+            "Elijo la operación y calculo",
+            "Reviso si mi respuesta tiene sentido"
+          ],
+          "explicacion": "Primero leo, después busco los datos, luego elijo la operación y calculo, y al final reviso si la respuesta tiene sentido.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 3 y OA 7",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l3-e09",
+          "unidad": 2,
+          "leccion": 3,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "problemas-dinero",
+          "caso": "Valentina tiene $5.000. Compra un libro de $3.200 y un lápiz de $900.",
+          "enunciado": "¿Cuánta plata le queda?",
+          "opciones": [
+            "$900",
+            "$1.800",
+            "$4.100",
+            "$9.100"
+          ],
+          "respuesta": 0,
+          "explicacion": "Primero suma lo que gasta: $3.200 + $900 = $4.100. Después resta: $5.000 − $4.100 = $900.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 3 y OA 7",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u2-l3-e10",
+          "unidad": 2,
+          "leccion": 3,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "problemas-dinero",
+          "caso": "Para la once, la mamá de Pedro compra 3 paquetes de galletas a $700 cada uno. Paga con un billete de $5.000.",
+          "enunciado": "¿Cuánto le dan de vuelto?",
+          "opciones": [
+            "$2.900",
+            "$2.100",
+            "$4.300",
+            "$3.000"
+          ],
+          "respuesta": 0,
+          "explicacion": "Primero multiplica: 3 × $700 = $2.100. Después resta: $5.000 − $2.100 = $2.900 de vuelto.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 3 y OA 7",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        }
+      ]
+    }
+  ]
+}

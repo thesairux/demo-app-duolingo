@@ -1,0 +1,856 @@
+{
+  "unidad": 3,
+  "titulo": "Fracciones y decimales",
+  "descripcion": "Partes de un entero: fracciones para repartir la pizza y decimales para medir. Comparar y sumar partes.",
+  "fueraDelMaterial": false,
+  "cofreDespuesDe": 2,
+  "lecciones": [
+    {
+      "id": "u3-l1",
+      "numero": 1,
+      "titulo": "¿Qué es una fracción?",
+      "objetivo": "Entender qué indican el numerador y el denominador de una fracción.",
+      "tipoNodo": "leccion",
+      "guia": [
+        {
+          "titulo": "Partes iguales",
+          "texto": "Una fracción indica partes iguales de un entero. Si cortas una pizza en 4 partes iguales y comes 1, comiste 1/4 (un cuarto).",
+          "ejemplo": "🍕 Una pizza en 4 trozos iguales: cada trozo es 1/4.",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 8",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Arriba y abajo",
+          "texto": "El número de abajo es el denominador: en cuántas partes iguales se dividió el entero. El de arriba es el numerador: cuántas partes tomas.",
+          "ejemplo": "3/5: tomas 3 de 5 partes iguales.",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 8",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Cómo se leen",
+          "texto": "1/2 es un medio, 1/3 un tercio, 1/4 un cuarto y 1/5 un quinto. Desde el 11 se dice «avos»: 1/12 es un doceavo.",
+          "ejemplo": "2/3 se lee «dos tercios».",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 8",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        }
+      ],
+      "ejercicios": [
+        {
+          "id": "u3-l1-e01",
+          "unidad": 3,
+          "leccion": 1,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "fracciones",
+          "enunciado": "Una pizza se cortó en 8 partes iguales y Juan comió 3. ¿Qué fracción comió?",
+          "opciones": [
+            "3/8",
+            "8/3",
+            "3/5",
+            "5/8"
+          ],
+          "respuesta": 0,
+          "explicacion": "La pizza tiene 8 partes iguales (denominador) y Juan comió 3 (numerador): 3/8.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l1-e02",
+          "unidad": 3,
+          "leccion": 1,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "fracciones",
+          "enunciado": "En la fracción 2/5, el denominador es 5.",
+          "respuesta": true,
+          "explicacion": "Verdadero. El denominador es el número de abajo: indica que el entero se dividió en 5 partes iguales.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l1-e03",
+          "unidad": 3,
+          "leccion": 1,
+          "tipo": "completar",
+          "dificultad": 1,
+          "concepto": "fracciones",
+          "enunciado": "La fracción 1/2 se lee «un ___».",
+          "respuesta": "medio",
+          "banco": [
+            "medio",
+            "tercio",
+            "cuarto"
+          ],
+          "explicacion": "1/2 se lee «un medio»: es una de dos partes iguales.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l1-e04",
+          "unidad": 3,
+          "leccion": 1,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "fracciones",
+          "enunciado": "🟦🟦🟦⬜ ¿Qué fracción de la barra está pintada de azul?",
+          "opciones": [
+            "3/4",
+            "1/4",
+            "4/3",
+            "3/1"
+          ],
+          "respuesta": 0,
+          "explicacion": "La barra tiene 4 partes iguales y 3 están pintadas de azul: 3/4 (tres cuartos).",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l1-e05",
+          "unidad": 3,
+          "leccion": 1,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "fracciones",
+          "enunciado": "Para hablar de fracciones, las partes del entero deben ser iguales.",
+          "respuesta": true,
+          "explicacion": "Verdadero. Si las partes no son iguales, no podemos decir que cada una es un medio, un tercio o un cuarto.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l1-e06",
+          "unidad": 3,
+          "leccion": 1,
+          "tipo": "unir_pares",
+          "dificultad": 2,
+          "concepto": "fracciones",
+          "enunciado": "Une cada fracción con cómo se lee.",
+          "pares": [
+            {
+              "a": "1/3",
+              "b": "Un tercio"
+            },
+            {
+              "a": "3/4",
+              "b": "Tres cuartos"
+            },
+            {
+              "a": "2/5",
+              "b": "Dos quintos"
+            },
+            {
+              "a": "5/8",
+              "b": "Cinco octavos"
+            }
+          ],
+          "explicacion": "1/3 es un tercio, 3/4 son tres cuartos, 2/5 son dos quintos y 5/8 son cinco octavos.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l1-e07",
+          "unidad": 3,
+          "leccion": 1,
+          "tipo": "seleccion_multiple",
+          "dificultad": 2,
+          "concepto": "fracciones",
+          "enunciado": "Una cinta se cortó en 6 partes iguales. Si usas 5, ¿qué fracción queda?",
+          "opciones": [
+            "1/6",
+            "5/6",
+            "6/5",
+            "1/5"
+          ],
+          "respuesta": 0,
+          "explicacion": "Queda 6 − 5 = 1 parte de 6. La fracción que queda es 1/6.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l1-e08",
+          "unidad": 3,
+          "leccion": 1,
+          "tipo": "identificar_error",
+          "dificultad": 2,
+          "concepto": "fracciones",
+          "enunciado": "Toca la parte que está equivocada.",
+          "respuesta": 1,
+          "segmentos": [
+            "En la fracción 4/7, ",
+            "el 4 es el denominador ",
+            "y el 7 dice en cuántas partes se divide el entero."
+          ],
+          "correccion": "el 4 es el numerador",
+          "explicacion": "El 4 está arriba: es el numerador, las partes que tomas. El 7 está abajo: es el denominador.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l1-e09",
+          "unidad": 3,
+          "leccion": 1,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "fracciones",
+          "caso": "Una tableta de chocolate tiene 12 cuadritos iguales. Rosa se comió 5 y su hermano se comió 4.",
+          "enunciado": "¿Qué fracción del chocolate se comieron entre los dos?",
+          "opciones": [
+            "9/12",
+            "5/12",
+            "4/12",
+            "9/24"
+          ],
+          "respuesta": 0,
+          "explicacion": "Entre los dos comieron 5 + 4 = 9 cuadritos de 12. La fracción es 9/12.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l1-e10",
+          "unidad": 3,
+          "leccion": 1,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "fracciones",
+          "caso": "En un estuche hay 10 lápices: 7 son rojos y los demás son azules.",
+          "enunciado": "¿Qué fracción de los lápices es azul?",
+          "opciones": [
+            "3/10",
+            "7/10",
+            "3/7",
+            "10/3"
+          ],
+          "respuesta": 0,
+          "explicacion": "Los azules son 10 − 7 = 3 de los 10 lápices. La fracción azul es 3/10.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        }
+      ]
+    },
+    {
+      "id": "u3-l2",
+      "numero": 2,
+      "titulo": "Comparar y sumar fracciones",
+      "objetivo": "Comparar fracciones, y sumar o restar las que tienen igual denominador.",
+      "tipoNodo": "leccion",
+      "guia": [
+        {
+          "titulo": "Igual denominador",
+          "texto": "Si dos fracciones tienen el mismo denominador, es mayor la que tiene el numerador más grande: tiene más partes del mismo tamaño.",
+          "ejemplo": "5/8 > 3/8",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 8 y OA 9",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Igual numerador",
+          "texto": "Si tienen el mismo numerador, es mayor la de denominador más chico. Mientras en menos partes cortas, más grande es cada parte.",
+          "ejemplo": "1/3 > 1/5: un tercio de pizza es más que un quinto.",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 8 y OA 9",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Sumar y restar",
+          "texto": "Si tienen igual denominador, sumas o restas los numeradores, y el denominador queda igual.",
+          "ejemplo": "2/7 + 3/7 = 5/7 · 6/8 − 1/8 = 5/8",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 8 y OA 9",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        }
+      ],
+      "ejercicios": [
+        {
+          "id": "u3-l2-e01",
+          "unidad": 3,
+          "leccion": 2,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "operar-fracciones",
+          "enunciado": "¿Cuánto es 2/5 + 1/5?",
+          "opciones": [
+            "3/5",
+            "3/10",
+            "2/5",
+            "1/5"
+          ],
+          "respuesta": 0,
+          "explicacion": "Con igual denominador se suman los numeradores: 2 + 1 = 3. El denominador queda igual: 3/5.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8 y OA 9",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l2-e02",
+          "unidad": 3,
+          "leccion": 2,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "operar-fracciones",
+          "enunciado": "4/9 es mayor que 7/9.",
+          "respuesta": false,
+          "explicacion": "Falso. Tienen el mismo denominador, y 7 partes son más que 4. Entonces 7/9 > 4/9.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8 y OA 9",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l2-e03",
+          "unidad": 3,
+          "leccion": 2,
+          "tipo": "completar",
+          "dificultad": 1,
+          "concepto": "operar-fracciones",
+          "enunciado": "5/6 − 2/6 = ___/6",
+          "respuesta": "3",
+          "banco": [
+            "3",
+            "7",
+            "0"
+          ],
+          "explicacion": "Se restan los numeradores: 5 − 2 = 3. El denominador sigue siendo 6, así que da 3/6.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8 y OA 9",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l2-e04",
+          "unidad": 3,
+          "leccion": 2,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "operar-fracciones",
+          "enunciado": "¿Qué fracción es la mayor?",
+          "opciones": [
+            "5/8",
+            "3/8",
+            "1/8",
+            "2/8"
+          ],
+          "respuesta": 0,
+          "explicacion": "Todas tienen denominador 8. La mayor es la que tiene más partes: 5/8.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8 y OA 9",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l2-e05",
+          "unidad": 3,
+          "leccion": 2,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "operar-fracciones",
+          "enunciado": "Al sumar 1/4 + 2/4, el denominador sigue siendo 4.",
+          "respuesta": true,
+          "explicacion": "Verdadero. Solo se suman los numeradores: 1/4 + 2/4 = 3/4. El tamaño de las partes no cambia.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8 y OA 9",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l2-e06",
+          "unidad": 3,
+          "leccion": 2,
+          "tipo": "ordenar",
+          "dificultad": 2,
+          "concepto": "operar-fracciones",
+          "enunciado": "Ordena de menor a mayor.",
+          "pasos": [
+            "1/6",
+            "1/5",
+            "1/3",
+            "1/2"
+          ],
+          "explicacion": "Con el mismo numerador, mientras más grande es el denominador, más chica es cada parte: 1/6 < 1/5 < 1/3 < 1/2.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8 y OA 9",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l2-e07",
+          "unidad": 3,
+          "leccion": 2,
+          "tipo": "seleccion_multiple",
+          "dificultad": 2,
+          "concepto": "operar-fracciones",
+          "enunciado": "¿Qué es más: 1/3 o 1/8 de la misma torta?",
+          "opciones": [
+            "1/3",
+            "1/8",
+            "Son iguales",
+            "No se puede saber"
+          ],
+          "respuesta": 0,
+          "explicacion": "Si cortas la torta en 3 partes, cada trozo es más grande que si la cortas en 8. Entonces 1/3 > 1/8.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8 y OA 9",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l2-e08",
+          "unidad": 3,
+          "leccion": 2,
+          "tipo": "clasificar",
+          "dificultad": 2,
+          "concepto": "operar-fracciones",
+          "enunciado": "¿Cuánto da cada cuenta?",
+          "categorias": [
+            "Da 4/5",
+            "Da 3/5"
+          ],
+          "elementos": [
+            {
+              "texto": "1/5 + 3/5",
+              "categoria": 0
+            },
+            {
+              "texto": "2/5 + 2/5",
+              "categoria": 0
+            },
+            {
+              "texto": "1/5 + 2/5",
+              "categoria": 1
+            },
+            {
+              "texto": "4/5 − 1/5",
+              "categoria": 1
+            },
+            {
+              "texto": "5/5 − 1/5",
+              "categoria": 0
+            }
+          ],
+          "explicacion": "1/5 + 3/5, 2/5 + 2/5 y 5/5 − 1/5 dan 4/5. En cambio, 1/5 + 2/5 y 4/5 − 1/5 dan 3/5.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8 y OA 9",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l2-e09",
+          "unidad": 3,
+          "leccion": 2,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "operar-fracciones",
+          "caso": "Joaquín tenía 7/10 de una cinta. Usó 4/10 para envolver un regalo.",
+          "enunciado": "¿Qué fracción de la cinta le queda?",
+          "opciones": [
+            "3/10",
+            "11/10",
+            "4/10",
+            "7/4"
+          ],
+          "respuesta": 0,
+          "explicacion": "Se restan los numeradores: 7/10 − 4/10 = 3/10. El denominador queda igual.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8 y OA 9",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l2-e10",
+          "unidad": 3,
+          "leccion": 2,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "operar-fracciones",
+          "caso": "Ema leyó 1/4 de su libro el lunes y 2/4 el martes.",
+          "enunciado": "¿Qué fracción del libro le falta por leer?",
+          "opciones": [
+            "1/4",
+            "3/4",
+            "2/4",
+            "3/8"
+          ],
+          "respuesta": 0,
+          "explicacion": "Leyó 1/4 + 2/4 = 3/4. El libro completo es 4/4, así que le falta 4/4 − 3/4 = 1/4.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8 y OA 9",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        }
+      ]
+    },
+    {
+      "id": "u3-l3",
+      "numero": 3,
+      "titulo": "Décimos y centésimos",
+      "objetivo": "Leer y escribir números decimales con décimos y centésimos.",
+      "tipoNodo": "leccion",
+      "guia": [
+        {
+          "titulo": "El décimo",
+          "texto": "Si divides un entero en 10 partes iguales, cada parte es un décimo. Se escribe 1/10 o 0,1.",
+          "ejemplo": "3 décimos = 3/10 = 0,3",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 11 y OA 12",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "El centésimo",
+          "texto": "Si divides un entero en 100 partes iguales, cada parte es un centésimo. Se escribe 1/100 o 0,01.",
+          "ejemplo": "25 centésimos = 25/100 = 0,25",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 11 y OA 12",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "La coma decimal",
+          "texto": "A la izquierda de la coma van los enteros. A la derecha van primero los décimos y después los centésimos.",
+          "ejemplo": "2,45 = 2 enteros, 4 décimos y 5 centésimos",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 11 y OA 12",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        }
+      ],
+      "ejercicios": [
+        {
+          "id": "u3-l3-e01",
+          "unidad": 3,
+          "leccion": 3,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "decimales",
+          "enunciado": "¿Cómo se escribe «7 décimos» con un número decimal?",
+          "opciones": [
+            "0,7",
+            "7,0",
+            "0,07",
+            "70"
+          ],
+          "respuesta": 0,
+          "explicacion": "7 décimos es lo mismo que 7/10, y se escribe 0,7: cero enteros y 7 décimos.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 11 y OA 12",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l3-e02",
+          "unidad": 3,
+          "leccion": 3,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "decimales",
+          "enunciado": "0,5 es lo mismo que 5/10.",
+          "respuesta": true,
+          "explicacion": "Verdadero. 0,5 se lee «cinco décimos», igual que la fracción 5/10.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 11 y OA 12",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l3-e03",
+          "unidad": 3,
+          "leccion": 3,
+          "tipo": "completar",
+          "dificultad": 1,
+          "concepto": "decimales",
+          "enunciado": "Un entero tiene ___ décimos.",
+          "respuesta": "10",
+          "banco": [
+            "10",
+            "100",
+            "1"
+          ],
+          "explicacion": "Si divides un entero en 10 partes iguales, cada una es un décimo. Por eso 10 décimos forman un entero.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 11 y OA 12",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l3-e04",
+          "unidad": 3,
+          "leccion": 3,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "decimales",
+          "enunciado": "¿Qué número decimal es igual a 35/100?",
+          "opciones": [
+            "0,35",
+            "3,5",
+            "35,0",
+            "0,035"
+          ],
+          "respuesta": 0,
+          "explicacion": "35/100 son 35 centésimos, y se escribe 0,35.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 11 y OA 12",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l3-e05",
+          "unidad": 3,
+          "leccion": 3,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "decimales",
+          "enunciado": "En el número 4,8, el 4 está en los décimos.",
+          "respuesta": false,
+          "explicacion": "Falso. El 4 está a la izquierda de la coma: son 4 enteros. El 8 es el que está en los décimos.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 11 y OA 12",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l3-e06",
+          "unidad": 3,
+          "leccion": 3,
+          "tipo": "unir_pares",
+          "dificultad": 2,
+          "concepto": "decimales",
+          "enunciado": "Une cada fracción con su número decimal.",
+          "pares": [
+            {
+              "a": "3/10",
+              "b": "0,3"
+            },
+            {
+              "a": "3/100",
+              "b": "0,03"
+            },
+            {
+              "a": "13/100",
+              "b": "0,13"
+            },
+            {
+              "a": "9/10",
+              "b": "0,9"
+            }
+          ],
+          "explicacion": "Los décimos ocupan una cifra después de la coma y los centésimos, dos. Por eso 3/10 = 0,3 y 3/100 = 0,03.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 11 y OA 12",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l3-e07",
+          "unidad": 3,
+          "leccion": 3,
+          "tipo": "seleccion_multiple",
+          "dificultad": 2,
+          "concepto": "decimales",
+          "enunciado": "¿Cuál es el número mayor?",
+          "opciones": [
+            "0,8",
+            "0,08",
+            "0,75",
+            "0,5"
+          ],
+          "respuesta": 0,
+          "explicacion": "0,8 son 80 centésimos: más que 75, 50 u 8 centésimos. Por eso 0,8 es el mayor.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 11 y OA 12",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l3-e08",
+          "unidad": 3,
+          "leccion": 3,
+          "tipo": "identificar_error",
+          "dificultad": 2,
+          "concepto": "decimales",
+          "enunciado": "Toca la parte que está equivocada.",
+          "respuesta": 2,
+          "segmentos": [
+            "El número 2,35 tiene 2 enteros, ",
+            "3 décimos ",
+            "y 5 décimos."
+          ],
+          "correccion": "y 5 centésimos.",
+          "explicacion": "La segunda cifra después de la coma está en los centésimos: 2,35 tiene 2 enteros, 3 décimos y 5 centésimos.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 11 y OA 12",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l3-e09",
+          "unidad": 3,
+          "leccion": 3,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "decimales",
+          "caso": "Una lagartija mide 0,12 metros de largo y un caracol mide 0,05 metros.",
+          "enunciado": "¿Cuánto más mide la lagartija que el caracol?",
+          "opciones": [
+            "0,07 metros",
+            "0,17 metros",
+            "0,7 metros",
+            "7 metros"
+          ],
+          "respuesta": 0,
+          "explicacion": "Se restan los centésimos: 12 − 5 = 7 centésimos. La lagartija mide 0,07 metros más.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 11 y OA 12",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l3-e10",
+          "unidad": 3,
+          "leccion": 3,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "decimales",
+          "caso": "Para un experimento, Isidora pone 0,4 litros de agua en un frasco. Después agrega 0,3 litros más.",
+          "enunciado": "¿Cuánta agua hay en el frasco?",
+          "opciones": [
+            "0,7 litros",
+            "0,1 litros",
+            "7 litros",
+            "0,12 litros"
+          ],
+          "respuesta": 0,
+          "explicacion": "Se suman los décimos: 4 décimos + 3 décimos = 7 décimos. En el frasco hay 0,7 litros.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 11 y OA 12",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        }
+      ]
+    }
+  ]
+}

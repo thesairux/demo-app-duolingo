@@ -1,0 +1,870 @@
+{
+  "unidad": 4,
+  "titulo": "Medición y geometría",
+  "descripcion": "La hora, las medidas, el perímetro y el área. Y también los ángulos y la simetría de las figuras.",
+  "fueraDelMaterial": false,
+  "cofreDespuesDe": 2,
+  "lecciones": [
+    {
+      "id": "u4-l1",
+      "numero": 1,
+      "titulo": "La hora y el tiempo",
+      "objetivo": "Leer la hora en distintos relojes y pasar de una unidad de tiempo a otra.",
+      "tipoNodo": "leccion",
+      "guia": [
+        {
+          "titulo": "Equivalencias",
+          "texto": "Un minuto tiene 60 segundos y una hora tiene 60 minutos. Un día tiene 24 horas y un año tiene 12 meses.",
+          "ejemplo": "Media hora = 30 minutos · Un cuarto de hora = 15 minutos",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 20 y OA 21",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "AM y PM",
+          "texto": "Las horas AM van desde la medianoche hasta el mediodía. Las horas PM van desde el mediodía hasta la medianoche.",
+          "ejemplo": "7:00 AM: desayuno · 7:00 PM: once",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 20 y OA 21",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "El reloj de 24 horas",
+          "texto": "En el reloj de 24 horas, después de las 12:00 se sigue contando: 13:00, 14:00… Para pasarlo a PM, le restas 12.",
+          "ejemplo": "15:00 = 3:00 PM · 20:00 = 8:00 PM",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 20 y OA 21",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        }
+      ],
+      "ejercicios": [
+        {
+          "id": "u4-l1-e01",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "tiempo",
+          "enunciado": "¿Cuántos minutos tiene una hora?",
+          "opciones": [
+            "60",
+            "100",
+            "30",
+            "24"
+          ],
+          "respuesta": 0,
+          "explicacion": "Una hora tiene 60 minutos, y un minuto tiene 60 segundos.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l1-e02",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "tiempo",
+          "enunciado": "Media hora son 30 minutos.",
+          "respuesta": true,
+          "explicacion": "Verdadero. Una hora tiene 60 minutos, y la mitad de 60 es 30.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l1-e03",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "completar",
+          "dificultad": 1,
+          "concepto": "tiempo",
+          "enunciado": "Un año tiene ___ meses.",
+          "respuesta": "12",
+          "banco": [
+            "12",
+            "10",
+            "24"
+          ],
+          "explicacion": "Un año tiene 12 meses: de enero a diciembre.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l1-e04",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "tiempo",
+          "enunciado": "En un reloj de 24 horas, ¿qué hora es 15:00?",
+          "opciones": [
+            "3:00 PM",
+            "5:00 PM",
+            "3:00 AM",
+            "1:00 PM"
+          ],
+          "respuesta": 0,
+          "explicacion": "Para pasar a PM se resta 12: 15 − 12 = 3. Son las 3:00 PM, en la tarde.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l1-e05",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "tiempo",
+          "enunciado": "Las 8:00 AM son de noche.",
+          "respuesta": false,
+          "explicacion": "Falso. AM son las horas antes del mediodía. Las 8:00 AM son en la mañana.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l1-e06",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "unir_pares",
+          "dificultad": 2,
+          "concepto": "tiempo",
+          "enunciado": "Une cada hora del reloj de 24 horas con su hora PM.",
+          "pares": [
+            {
+              "a": "13:00",
+              "b": "1:00 PM"
+            },
+            {
+              "a": "18:00",
+              "b": "6:00 PM"
+            },
+            {
+              "a": "21:00",
+              "b": "9:00 PM"
+            },
+            {
+              "a": "16:00",
+              "b": "4:00 PM"
+            }
+          ],
+          "explicacion": "A cada hora se le resta 12: 13:00 es 1:00 PM, 16:00 es 4:00 PM, 18:00 es 6:00 PM y 21:00 es 9:00 PM.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l1-e07",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "seleccion_multiple",
+          "dificultad": 2,
+          "concepto": "tiempo",
+          "enunciado": "¿Cuántos minutos hay en 2 horas y media?",
+          "opciones": [
+            "150",
+            "130",
+            "250",
+            "90"
+          ],
+          "respuesta": 0,
+          "explicacion": "2 horas son 60 + 60 = 120 minutos. Media hora son 30 más: 120 + 30 = 150 minutos.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l1-e08",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "ordenar",
+          "dificultad": 2,
+          "concepto": "tiempo",
+          "enunciado": "Ordena de más corto a más largo.",
+          "pasos": [
+            "50 segundos",
+            "5 minutos",
+            "1 hora",
+            "90 minutos"
+          ],
+          "explicacion": "50 segundos es menos de un minuto. Después vienen 5 minutos, 1 hora (60 minutos) y 90 minutos.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l1-e09",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "tiempo",
+          "caso": "La película empieza a las 16:30 y dura 2 horas.",
+          "enunciado": "¿A qué hora termina?",
+          "opciones": [
+            "18:30",
+            "17:30",
+            "16:32",
+            "14:30"
+          ],
+          "respuesta": 0,
+          "explicacion": "Se suman 2 horas a las 16:30: 16 + 2 = 18. La película termina a las 18:30, o sea, a las 6:30 PM.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l1-e10",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "tiempo",
+          "caso": "Amanda entra al colegio a las 8:00 AM y sale a las 3:00 PM.",
+          "enunciado": "¿Cuántas horas está en el colegio?",
+          "opciones": [
+            "7 horas",
+            "5 horas",
+            "11 horas",
+            "3 horas"
+          ],
+          "respuesta": 0,
+          "explicacion": "De 8:00 AM a 12:00 hay 4 horas, y de 12:00 a 3:00 PM hay 3 más. En total, 4 + 3 = 7 horas.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        }
+      ]
+    },
+    {
+      "id": "u4-l2",
+      "numero": 2,
+      "titulo": "Medir: perímetro y área",
+      "objetivo": "Usar metros, centímetros y milímetros, y calcular el perímetro y el área de un rectángulo.",
+      "tipoNodo": "leccion",
+      "guia": [
+        {
+          "titulo": "m, cm y mm",
+          "texto": "Un metro tiene 100 centímetros y un centímetro tiene 10 milímetros. Usamos metros para cosas largas y milímetros para cosas muy chicas.",
+          "ejemplo": "Una puerta: 2 m · Un lápiz: 15 cm · Una hormiga: 5 mm",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 22 y OA 23",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "El perímetro",
+          "texto": "El perímetro es la medida del borde de una figura. Se calcula sumando lo que mide cada lado.",
+          "ejemplo": "Rectángulo de 5 cm y 3 cm: 5 + 3 + 5 + 3 = 16 cm",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 22 y OA 23",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "El área",
+          "texto": "El área es lo que ocupa una figura por dentro. En un rectángulo se multiplica el largo por el ancho, y se mide en cm² o en m².",
+          "ejemplo": "Rectángulo de 5 cm y 3 cm: 5 × 3 = 15 cm²",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 22 y OA 23",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        }
+      ],
+      "ejercicios": [
+        {
+          "id": "u4-l2-e01",
+          "unidad": 4,
+          "leccion": 2,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "perimetro-area",
+          "enunciado": "¿Cuántos centímetros tiene un metro?",
+          "opciones": [
+            "100",
+            "10",
+            "1.000",
+            "60"
+          ],
+          "respuesta": 0,
+          "explicacion": "Un metro tiene 100 centímetros. Y cada centímetro tiene 10 milímetros.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 22 y OA 23",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l2-e02",
+          "unidad": 4,
+          "leccion": 2,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "perimetro-area",
+          "enunciado": "El perímetro es la medida del borde de una figura.",
+          "respuesta": true,
+          "explicacion": "Verdadero. Para calcularlo, se suman las medidas de todos sus lados.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 22 y OA 23",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l2-e03",
+          "unidad": 4,
+          "leccion": 2,
+          "tipo": "completar",
+          "dificultad": 1,
+          "concepto": "perimetro-area",
+          "enunciado": "El área de un rectángulo se calcula multiplicando el largo por el ___.",
+          "respuesta": "ancho",
+          "banco": [
+            "ancho",
+            "perímetro",
+            "borde"
+          ],
+          "explicacion": "Área del rectángulo = largo × ancho. Por ejemplo, uno de 4 cm por 2 cm tiene un área de 8 cm².",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 22 y OA 23",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l2-e04",
+          "unidad": 4,
+          "leccion": 2,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "perimetro-area",
+          "enunciado": "¿Qué unidad usarías para medir el largo de una hormiga?",
+          "opciones": [
+            "Milímetros",
+            "Metros",
+            "Kilómetros",
+            "Litros"
+          ],
+          "respuesta": 0,
+          "explicacion": "Una hormiga es muy chica, así que se mide en milímetros. Los metros y los kilómetros son para cosas largas.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 22 y OA 23",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l2-e05",
+          "unidad": 4,
+          "leccion": 2,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "perimetro-area",
+          "enunciado": "Un cuadrado de 3 cm de lado tiene un perímetro de 9 cm.",
+          "respuesta": false,
+          "explicacion": "Falso. El cuadrado tiene 4 lados iguales: 3 + 3 + 3 + 3 = 12 cm. Su área sí es 9 cm².",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 22 y OA 23",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l2-e06",
+          "unidad": 4,
+          "leccion": 2,
+          "tipo": "unir_pares",
+          "dificultad": 2,
+          "concepto": "perimetro-area",
+          "enunciado": "Une cada medida con su equivalencia.",
+          "pares": [
+            {
+              "a": "1 m",
+              "b": "100 cm"
+            },
+            {
+              "a": "1 cm",
+              "b": "10 mm"
+            },
+            {
+              "a": "2 m",
+              "b": "200 cm"
+            },
+            {
+              "a": "5 cm",
+              "b": "50 mm"
+            }
+          ],
+          "explicacion": "1 m = 100 cm y 1 cm = 10 mm. Por eso 2 m = 200 cm y 5 cm = 50 mm.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 22 y OA 23",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l2-e07",
+          "unidad": 4,
+          "leccion": 2,
+          "tipo": "seleccion_multiple",
+          "dificultad": 2,
+          "concepto": "perimetro-area",
+          "enunciado": "¿Cuál es el área de un rectángulo de 6 cm de largo y 4 cm de ancho?",
+          "opciones": [
+            "24 cm²",
+            "20 cm²",
+            "10 cm²",
+            "24 cm"
+          ],
+          "respuesta": 0,
+          "explicacion": "Área = largo × ancho = 6 × 4 = 24 cm². Ojo: el perímetro sería 6 + 4 + 6 + 4 = 20 cm.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 22 y OA 23",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l2-e08",
+          "unidad": 4,
+          "leccion": 2,
+          "tipo": "clasificar",
+          "dificultad": 2,
+          "concepto": "perimetro-area",
+          "enunciado": "¿Se calcula con el perímetro o con el área?",
+          "categorias": [
+            "Perímetro",
+            "Área"
+          ],
+          "elementos": [
+            {
+              "texto": "La cinta para el borde de un cuadro",
+              "categoria": 0
+            },
+            {
+              "texto": "El pasto para cubrir una cancha",
+              "categoria": 1
+            },
+            {
+              "texto": "La reja alrededor de un patio",
+              "categoria": 0
+            },
+            {
+              "texto": "Las baldosas para el piso de una pieza",
+              "categoria": 1
+            }
+          ],
+          "explicacion": "Lo que va por el borde, como la cinta y la reja, es perímetro. Lo que cubre por dentro, como el pasto y las baldosas, es área.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 22 y OA 23",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l2-e09",
+          "unidad": 4,
+          "leccion": 2,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "perimetro-area",
+          "caso": "El patio de Clemente es un rectángulo de 8 m de largo y 5 m de ancho. Quiere ponerle una reja alrededor.",
+          "enunciado": "¿Cuántos metros de reja necesita?",
+          "opciones": [
+            "26 m",
+            "40 m",
+            "13 m",
+            "21 m"
+          ],
+          "respuesta": 0,
+          "explicacion": "La reja va por el borde: es el perímetro. 8 + 5 + 8 + 5 = 26 metros.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 22 y OA 23",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l2-e10",
+          "unidad": 4,
+          "leccion": 2,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "perimetro-area",
+          "caso": "La profe quiere cubrir con papel de colores una pizarra de 3 m de largo y 2 m de ancho.",
+          "enunciado": "¿Cuántos m² de papel necesita?",
+          "opciones": [
+            "6 m²",
+            "10 m²",
+            "5 m²",
+            "12 m²"
+          ],
+          "respuesta": 0,
+          "explicacion": "Cubrir es calcular el área: largo × ancho = 3 × 2 = 6 m². Si fuera solo el borde, serían 10 m.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 22 y OA 23",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        }
+      ]
+    },
+    {
+      "id": "u4-l3",
+      "numero": 3,
+      "titulo": "Ángulos y simetría",
+      "objetivo": "Reconocer ángulos rectos, agudos y obtusos, y figuras simétricas.",
+      "tipoNodo": "leccion",
+      "guia": [
+        {
+          "titulo": "Los ángulos",
+          "texto": "Un ángulo se forma cuando dos líneas se juntan en un punto. El ángulo recto mide 90°, como la esquina de un cuaderno.",
+          "ejemplo": "Agudo: menos de 90° · Recto: 90° · Obtuso: más de 90°",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 17 y OA 19",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "El transportador",
+          "texto": "Los ángulos se miden en grados (°) con un transportador. Una vuelta completa tiene 360° y media vuelta tiene 180°.",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 17 y OA 19",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Simetría",
+          "texto": "Una figura es simétrica si al doblarla por una línea las dos mitades calzan justo. Esa línea se llama eje de simetría.",
+          "ejemplo": "Una mariposa y la letra A son simétricas.",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 17 y OA 19",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        }
+      ],
+      "ejercicios": [
+        {
+          "id": "u4-l3-e01",
+          "unidad": 4,
+          "leccion": 3,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "angulos",
+          "enunciado": "¿Cuánto mide un ángulo recto?",
+          "opciones": [
+            "90°",
+            "180°",
+            "45°",
+            "360°"
+          ],
+          "respuesta": 0,
+          "explicacion": "Un ángulo recto mide 90°, como la esquina de una hoja o de una puerta.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 17 y OA 19",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l3-e02",
+          "unidad": 4,
+          "leccion": 3,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "angulos",
+          "enunciado": "Un ángulo agudo mide menos de 90°.",
+          "respuesta": true,
+          "explicacion": "Verdadero. Los ángulos agudos son más cerrados que un ángulo recto: miden menos de 90°.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 17 y OA 19",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l3-e03",
+          "unidad": 4,
+          "leccion": 3,
+          "tipo": "completar",
+          "dificultad": 1,
+          "concepto": "angulos",
+          "enunciado": "Los ángulos se miden con un ___.",
+          "respuesta": "transportador",
+          "banco": [
+            "transportador",
+            "termómetro",
+            "reloj"
+          ],
+          "explicacion": "El transportador es una regla en forma de media luna que sirve para medir ángulos en grados.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 17 y OA 19",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l3-e04",
+          "unidad": 4,
+          "leccion": 3,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "simetria",
+          "enunciado": "¿Cuál de estas letras tiene un eje de simetría vertical?",
+          "opciones": [
+            "A",
+            "F",
+            "G",
+            "J"
+          ],
+          "respuesta": 0,
+          "explicacion": "Si doblas la A por una línea vertical justo al centro, sus dos mitades calzan. Con la F, la G y la J no pasa.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 17 y OA 19",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l3-e05",
+          "unidad": 4,
+          "leccion": 3,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "angulos",
+          "enunciado": "Un ángulo obtuso mide menos de 90°.",
+          "respuesta": false,
+          "explicacion": "Falso. El ángulo obtuso es más abierto que el recto: mide más de 90° y menos de 180°.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 17 y OA 19",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l3-e06",
+          "unidad": 4,
+          "leccion": 3,
+          "tipo": "clasificar",
+          "dificultad": 2,
+          "concepto": "angulos",
+          "enunciado": "Clasifica cada ángulo.",
+          "categorias": [
+            "Agudo",
+            "Obtuso"
+          ],
+          "elementos": [
+            {
+              "texto": "30°",
+              "categoria": 0
+            },
+            {
+              "texto": "120°",
+              "categoria": 1
+            },
+            {
+              "texto": "75°",
+              "categoria": 0
+            },
+            {
+              "texto": "150°",
+              "categoria": 1
+            },
+            {
+              "texto": "89°",
+              "categoria": 0
+            }
+          ],
+          "explicacion": "Los que miden menos de 90° son agudos: 30°, 75° y 89°. Los que miden más de 90° son obtusos: 120° y 150°.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 17 y OA 19",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l3-e07",
+          "unidad": 4,
+          "leccion": 3,
+          "tipo": "seleccion_multiple",
+          "dificultad": 2,
+          "concepto": "angulos",
+          "enunciado": "¿Qué ángulo forman los punteros del reloj a las 3:00?",
+          "opciones": [
+            "Recto (90°)",
+            "Agudo (30°)",
+            "Obtuso (120°)",
+            "Completo (360°)"
+          ],
+          "respuesta": 0,
+          "explicacion": "A las 3:00, un puntero apunta al 12 y el otro al 3. Forman un ángulo recto: 90°.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 17 y OA 19",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l3-e08",
+          "unidad": 4,
+          "leccion": 3,
+          "tipo": "identificar_error",
+          "dificultad": 2,
+          "concepto": "simetria",
+          "enunciado": "Toca la parte que está equivocada.",
+          "respuesta": 2,
+          "segmentos": [
+            "Un cuadrado tiene 4 lados iguales ",
+            "y 4 ángulos rectos, ",
+            "pero ningún eje de simetría."
+          ],
+          "correccion": "y también 4 ejes de simetría.",
+          "explicacion": "Un cuadrado tiene 4 ejes de simetría: uno vertical, uno horizontal y dos en diagonal.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 17 y OA 19",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l3-e09",
+          "unidad": 4,
+          "leccion": 3,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "simetria",
+          "caso": "Para el diario mural, Gaspar dobla un papel por la mitad y recorta medio corazón desde el doblez.",
+          "enunciado": "¿Qué tiene el corazón al abrir el papel?",
+          "opciones": [
+            "Un eje de simetría",
+            "Ningún eje de simetría",
+            "Dos ángulos rectos",
+            "Cuatro lados iguales"
+          ],
+          "respuesta": 0,
+          "explicacion": "El doblez queda justo al medio del corazón: es su eje de simetría. Por eso las dos mitades calzan.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 17 y OA 19",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l3-e10",
+          "unidad": 4,
+          "leccion": 3,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "angulos",
+          "caso": "Emilia mira el reloj a las 4:00. El puntero corto apunta al 4 y el largo apunta al 12.",
+          "enunciado": "¿Qué tipo de ángulo forman los punteros?",
+          "opciones": [
+            "Obtuso, porque mide más de 90°",
+            "Recto, porque mide 90°",
+            "Agudo, porque mide menos de 90°",
+            "No forman un ángulo"
+          ],
+          "respuesta": 0,
+          "explicacion": "Entre dos números seguidos del reloj hay 30°. Del 12 al 4 hay 4 × 30° = 120°: es un ángulo obtuso.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 17 y OA 19",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        }
+      ]
+    }
+  ]
+}

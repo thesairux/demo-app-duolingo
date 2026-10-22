@@ -1,0 +1,870 @@
+{
+  "unidad": 1,
+  "titulo": "Los números grandes",
+  "descripcion": "Leer, escribir, armar y comparar números hasta el 10.000. Así entiendes cuánto vale cada cifra.",
+  "fueraDelMaterial": false,
+  "cofreDespuesDe": 2,
+  "lecciones": [
+    {
+      "id": "u1-l1",
+      "numero": 1,
+      "titulo": "Leer y escribir números",
+      "objetivo": "Leer y escribir números de 4 cifras, y llegar hasta el 10.000.",
+      "tipoNodo": "leccion",
+      "guia": [
+        {
+          "titulo": "Los números de 4 cifras",
+          "texto": "Con 4 cifras escribimos los números desde el 1.000 hasta el 9.999. El punto separa los miles para leerlos más fácil.",
+          "ejemplo": "3.482 se lee «tres mil cuatrocientos ochenta y dos».",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 1",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Cómo se leen",
+          "texto": "Primero lees los miles y después el resto, como un número de 3 cifras. Si hay un cero, esa parte no se nombra.",
+          "ejemplo": "5.026 se lee «cinco mil veintiséis».",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 1",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "El 10.000",
+          "texto": "Después del 9.999 viene el 10.000: diez mil. Es el primer número de 5 cifras.",
+          "ejemplo": "9.999 + 1 = 10.000",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 1",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        }
+      ],
+      "ejercicios": [
+        {
+          "id": "u1-l1-e01",
+          "unidad": 1,
+          "leccion": 1,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "leer-numeros",
+          "enunciado": "¿Cómo se lee 2.315?",
+          "opciones": [
+            "Dos mil trescientos quince",
+            "Doscientos treinta y uno",
+            "Dos mil treinta y cinco",
+            "Veintitrés mil quince"
+          ],
+          "respuesta": 0,
+          "explicacion": "2.315 tiene 2 miles, 3 centenas y 15: dos mil trescientos quince.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l1-e02",
+          "unidad": 1,
+          "leccion": 1,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "leer-numeros",
+          "enunciado": "¿Qué número es «cuatro mil seiscientos ocho»?",
+          "opciones": [
+            "4.608",
+            "4.680",
+            "46.008",
+            "4.068"
+          ],
+          "respuesta": 0,
+          "explicacion": "Cuatro mil es 4.000 y seiscientos ocho es 608. Juntos forman 4.608.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l1-e03",
+          "unidad": 1,
+          "leccion": 1,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "leer-numeros",
+          "enunciado": "El número 7.000 se lee «setenta mil».",
+          "respuesta": false,
+          "explicacion": "Falso. 7.000 se lee «siete mil». Setenta mil se escribe 70.000 y tiene 5 cifras.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l1-e04",
+          "unidad": 1,
+          "leccion": 1,
+          "tipo": "completar",
+          "dificultad": 1,
+          "concepto": "leer-numeros",
+          "enunciado": "Después del 9.999 viene el ___.",
+          "respuesta": "10.000",
+          "banco": [
+            "10.000",
+            "1.000",
+            "9.000"
+          ],
+          "explicacion": "9.999 + 1 = 10.000. Es el primer número de 5 cifras.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l1-e05",
+          "unidad": 1,
+          "leccion": 1,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "leer-numeros",
+          "enunciado": "El número 5.026 tiene cuatro cifras.",
+          "respuesta": true,
+          "explicacion": "Verdadero. Sus cifras son 5, 0, 2 y 6: son cuatro. El cero también cuenta como cifra.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l1-e06",
+          "unidad": 1,
+          "leccion": 1,
+          "tipo": "unir_pares",
+          "dificultad": 2,
+          "concepto": "leer-numeros",
+          "enunciado": "Une cada número con su nombre.",
+          "pares": [
+            {
+              "a": "1.050",
+              "b": "Mil cincuenta"
+            },
+            {
+              "a": "1.500",
+              "b": "Mil quinientos"
+            },
+            {
+              "a": "1.005",
+              "b": "Mil cinco"
+            },
+            {
+              "a": "1.505",
+              "b": "Mil quinientos cinco"
+            }
+          ],
+          "explicacion": "Fíjate en los ceros: 1.050 es mil cincuenta, 1.500 es mil quinientos, 1.005 es mil cinco y 1.505 es mil quinientos cinco.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l1-e07",
+          "unidad": 1,
+          "leccion": 1,
+          "tipo": "seleccion_multiple",
+          "dificultad": 2,
+          "concepto": "leer-numeros",
+          "enunciado": "¿Qué número es «ocho mil noventa»?",
+          "opciones": [
+            "8.090",
+            "8.900",
+            "8.009",
+            "80.090"
+          ],
+          "respuesta": 0,
+          "explicacion": "Ocho mil noventa tiene 8 miles, 0 centenas, 9 decenas y 0 unidades. Se escribe 8.090.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l1-e08",
+          "unidad": 1,
+          "leccion": 1,
+          "tipo": "identificar_error",
+          "dificultad": 2,
+          "concepto": "leer-numeros",
+          "enunciado": "Toca la parte que está equivocada.",
+          "respuesta": 1,
+          "segmentos": [
+            "El número 3.704 ",
+            "se lee «tres mil setenta y cuatro»."
+          ],
+          "correccion": "se lee «tres mil setecientos cuatro».",
+          "explicacion": "3.704 tiene 7 centenas, o sea, setecientos. Por eso se lee «tres mil setecientos cuatro».",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l1-e09",
+          "unidad": 1,
+          "leccion": 1,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "leer-numeros",
+          "caso": "En la biblioteca del colegio hay seis mil doscientos libros. La profe escribe ese número en la pizarra.",
+          "enunciado": "¿Qué número escribió?",
+          "opciones": [
+            "6.200",
+            "6.020",
+            "62.000",
+            "600.200"
+          ],
+          "respuesta": 0,
+          "explicacion": "Seis mil es 6.000 y doscientos es 200. La profe escribió 6.200.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l1-e10",
+          "unidad": 1,
+          "leccion": 1,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "leer-numeros",
+          "caso": "Martina leyó en un letrero: «Altura del cerro: 2.340 metros». Se lo quiere contar a su abuela.",
+          "enunciado": "¿Cómo debe leer el número?",
+          "opciones": [
+            "Dos mil trescientos cuarenta",
+            "Doscientos treinta y cuatro",
+            "Veintitrés mil cuarenta",
+            "Dos mil treinta y cuatro"
+          ],
+          "respuesta": 0,
+          "explicacion": "2.340 tiene 2 miles, 3 centenas y 4 decenas: dos mil trescientos cuarenta metros.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        }
+      ]
+    },
+    {
+      "id": "u1-l2",
+      "numero": 2,
+      "titulo": "Valor posicional",
+      "objetivo": "Saber cuánto vale cada cifra según el lugar donde está.",
+      "tipoNodo": "leccion",
+      "guia": [
+        {
+          "titulo": "Cada lugar tiene un valor",
+          "texto": "En un número de 4 cifras, de derecha a izquierda están las unidades, las decenas, las centenas y las unidades de mil.",
+          "ejemplo": "En 4.725 hay 4 unidades de mil, 7 centenas, 2 decenas y 5 unidades.",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 1",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Una cifra, distintos valores",
+          "texto": "La misma cifra vale distinto según su lugar. Un 3 en las centenas vale 300, y en las unidades de mil vale 3.000.",
+          "ejemplo": "En 3.333 hay cuatro 3, y cada uno vale distinto.",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 1",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Descomponer un número",
+          "texto": "Descomponer es separar un número en lo que vale cada cifra. Si sumas las partes, vuelves al número.",
+          "ejemplo": "6.481 = 6.000 + 400 + 80 + 1",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 1",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        }
+      ],
+      "ejercicios": [
+        {
+          "id": "u1-l2-e01",
+          "unidad": 1,
+          "leccion": 2,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "valor-posicional",
+          "enunciado": "En el número 5.672, ¿qué cifra está en las centenas?",
+          "opciones": [
+            "6",
+            "5",
+            "7",
+            "2"
+          ],
+          "respuesta": 0,
+          "explicacion": "De derecha a izquierda: 2 unidades, 7 decenas, 6 centenas y 5 unidades de mil.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l2-e02",
+          "unidad": 1,
+          "leccion": 2,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "valor-posicional",
+          "enunciado": "¿Cuánto vale el 8 en el número 8.143?",
+          "opciones": [
+            "8.000",
+            "800",
+            "80",
+            "8"
+          ],
+          "respuesta": 0,
+          "explicacion": "El 8 está en las unidades de mil, así que vale 8.000.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l2-e03",
+          "unidad": 1,
+          "leccion": 2,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "valor-posicional",
+          "enunciado": "Una decena tiene 10 unidades.",
+          "respuesta": true,
+          "explicacion": "Verdadero. 10 unidades forman una decena, 10 decenas forman una centena y 10 centenas forman una unidad de mil.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l2-e04",
+          "unidad": 1,
+          "leccion": 2,
+          "tipo": "completar",
+          "dificultad": 1,
+          "concepto": "valor-posicional",
+          "enunciado": "4.000 + 300 + 20 + 5 = ___",
+          "respuesta": "4.325",
+          "banco": [
+            "4.325",
+            "4.253",
+            "4.352"
+          ],
+          "explicacion": "Juntamos las partes: 4 unidades de mil, 3 centenas, 2 decenas y 5 unidades forman 4.325.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l2-e05",
+          "unidad": 1,
+          "leccion": 2,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "valor-posicional",
+          "enunciado": "En el número 2.904, el 0 está en las decenas.",
+          "respuesta": true,
+          "explicacion": "Verdadero. 2.904 tiene 4 unidades, 0 decenas, 9 centenas y 2 unidades de mil.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l2-e06",
+          "unidad": 1,
+          "leccion": 2,
+          "tipo": "unir_pares",
+          "dificultad": 2,
+          "concepto": "valor-posicional",
+          "enunciado": "Une cada número con su descomposición.",
+          "pares": [
+            {
+              "a": "3.052",
+              "b": "3.000 + 50 + 2"
+            },
+            {
+              "a": "3.502",
+              "b": "3.000 + 500 + 2"
+            },
+            {
+              "a": "3.520",
+              "b": "3.000 + 500 + 20"
+            },
+            {
+              "a": "3.250",
+              "b": "3.000 + 200 + 50"
+            }
+          ],
+          "explicacion": "Cada número es la suma de lo que valen sus cifras. Por ejemplo, 3.520 = 3.000 + 500 + 20.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l2-e07",
+          "unidad": 1,
+          "leccion": 2,
+          "tipo": "seleccion_multiple",
+          "dificultad": 2,
+          "concepto": "valor-posicional",
+          "enunciado": "¿Qué número tiene 6 unidades de mil, 0 centenas, 4 decenas y 9 unidades?",
+          "opciones": [
+            "6.049",
+            "6.490",
+            "649",
+            "6.409"
+          ],
+          "respuesta": 0,
+          "explicacion": "Son 6 unidades de mil, 0 centenas, 4 decenas y 9 unidades: 6.049. El cero guarda el lugar de las centenas.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l2-e08",
+          "unidad": 1,
+          "leccion": 2,
+          "tipo": "clasificar",
+          "dificultad": 2,
+          "concepto": "valor-posicional",
+          "enunciado": "¿El 5 vale 500 o vale 50?",
+          "categorias": [
+            "Vale 500",
+            "Vale 50"
+          ],
+          "elementos": [
+            {
+              "texto": "1.523",
+              "categoria": 0
+            },
+            {
+              "texto": "8.950",
+              "categoria": 1
+            },
+            {
+              "texto": "2.507",
+              "categoria": 0
+            },
+            {
+              "texto": "4.159",
+              "categoria": 1
+            }
+          ],
+          "explicacion": "Si el 5 está en las centenas vale 500, como en 1.523 y 2.507. Si está en las decenas vale 50, como en 8.950 y 4.159.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l2-e09",
+          "unidad": 1,
+          "leccion": 2,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "valor-posicional",
+          "caso": "Tomás tiene 3 billetes de $1.000, 4 monedas de $100 y 6 monedas de $10.",
+          "enunciado": "¿Cuánta plata tiene en total?",
+          "opciones": [
+            "$3.460",
+            "$3.406",
+            "$346",
+            "$13.460"
+          ],
+          "respuesta": 0,
+          "explicacion": "3 billetes de $1.000 son $3.000, 4 monedas de $100 son $400 y 6 de $10 son $60. En total, $3.460.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l2-e10",
+          "unidad": 1,
+          "leccion": 2,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "valor-posicional",
+          "caso": "Para abrir un candado, Sofía necesita un número con 2 unidades de mil, 8 centenas, 0 decenas y 1 unidad.",
+          "enunciado": "¿Cuál es la clave?",
+          "opciones": [
+            "2.801",
+            "2.810",
+            "2.081",
+            "28.001"
+          ],
+          "respuesta": 0,
+          "explicacion": "2 unidades de mil, 8 centenas, 0 decenas y 1 unidad forman el número 2.801.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        }
+      ]
+    },
+    {
+      "id": "u1-l3",
+      "numero": 3,
+      "titulo": "Comparar y ordenar",
+      "objetivo": "Saber qué número es mayor o menor, y ordenarlos.",
+      "tipoNodo": "leccion",
+      "guia": [
+        {
+          "titulo": "Mayor o menor",
+          "texto": "Para comparar dos números de 4 cifras, mira primero las unidades de mil. Si son iguales, compara las centenas, y así sigues.",
+          "ejemplo": "4.581 es mayor que 4.518: tienen los mismos miles y centenas, pero 8 decenas es más que 1.",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 1",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Los signos > y <",
+          "texto": "El signo > se lee «mayor que» y el signo < se lee «menor que». La punta siempre apunta al número más chico.",
+          "ejemplo": "7.200 > 6.900 · 3.015 < 3.150",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 1",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        },
+        {
+          "titulo": "Ordenar",
+          "texto": "Ordenar de menor a mayor es partir por el más chico. En la recta numérica, los números crecen hacia la derecha.",
+          "ejemplo": "1.099 · 1.909 · 1.990",
+          "fuentes": [
+            {
+              "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+              "seccion": "OA 1",
+              "fueraDelMaterial": false
+            }
+          ],
+          "revisar": false
+        }
+      ],
+      "ejercicios": [
+        {
+          "id": "u1-l3-e01",
+          "unidad": 1,
+          "leccion": 3,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "comparar-numeros",
+          "enunciado": "¿Cuál es el número mayor?",
+          "opciones": [
+            "5.100",
+            "4.999",
+            "5.010",
+            "5.001"
+          ],
+          "respuesta": 0,
+          "explicacion": "5.100 es el mayor: tiene 5 unidades de mil y 1 centena. Los otros tienen menos.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l3-e02",
+          "unidad": 1,
+          "leccion": 3,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "comparar-numeros",
+          "enunciado": "3.450 es mayor que 3.540.",
+          "respuesta": false,
+          "explicacion": "Falso. Tienen las mismas unidades de mil, pero 3.540 tiene 5 centenas y 3.450 solo 4. Entonces 3.450 < 3.540.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l3-e03",
+          "unidad": 1,
+          "leccion": 3,
+          "tipo": "completar",
+          "dificultad": 1,
+          "concepto": "comparar-numeros",
+          "enunciado": "6.800 ___ 6.080",
+          "respuesta": ">",
+          "banco": [
+            ">",
+            "<",
+            "="
+          ],
+          "explicacion": "6.800 tiene 8 centenas y 6.080 tiene 0 centenas. Por eso 6.800 > 6.080.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l3-e04",
+          "unidad": 1,
+          "leccion": 3,
+          "tipo": "seleccion_multiple",
+          "dificultad": 1,
+          "concepto": "comparar-numeros",
+          "enunciado": "¿Qué número viene justo después del 2.999?",
+          "opciones": [
+            "3.000",
+            "2.000",
+            "2.998",
+            "3.999"
+          ],
+          "respuesta": 0,
+          "explicacion": "2.999 + 1 = 3.000. Al sumar 1, las unidades, las decenas y las centenas vuelven a cero.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l3-e05",
+          "unidad": 1,
+          "leccion": 3,
+          "tipo": "verdadero_falso",
+          "dificultad": 1,
+          "concepto": "comparar-numeros",
+          "enunciado": "En la recta numérica, los números crecen hacia la derecha.",
+          "respuesta": true,
+          "explicacion": "Verdadero. Mientras más a la derecha está un número en la recta, más grande es.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l3-e06",
+          "unidad": 1,
+          "leccion": 3,
+          "tipo": "ordenar",
+          "dificultad": 2,
+          "concepto": "comparar-numeros",
+          "enunciado": "Ordena de menor a mayor.",
+          "pasos": [
+            "1.099",
+            "1.909",
+            "1.990",
+            "9.011"
+          ],
+          "explicacion": "1.099 < 1.909 < 1.990 < 9.011. Mira primero las unidades de mil y después las centenas.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l3-e07",
+          "unidad": 1,
+          "leccion": 3,
+          "tipo": "seleccion_multiple",
+          "dificultad": 2,
+          "concepto": "comparar-numeros",
+          "enunciado": "¿Qué número está entre 4.500 y 4.600?",
+          "opciones": [
+            "4.550",
+            "4.650",
+            "4.050",
+            "5.550"
+          ],
+          "respuesta": 0,
+          "explicacion": "4.550 está entre 4.500 y 4.600: justo a mitad de camino.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l3-e08",
+          "unidad": 1,
+          "leccion": 3,
+          "tipo": "clasificar",
+          "dificultad": 2,
+          "concepto": "comparar-numeros",
+          "enunciado": "¿Es mayor o menor que 5.000?",
+          "categorias": [
+            "Mayor que 5.000",
+            "Menor que 5.000"
+          ],
+          "elementos": [
+            {
+              "texto": "5.010",
+              "categoria": 0
+            },
+            {
+              "texto": "4.990",
+              "categoria": 1
+            },
+            {
+              "texto": "5.300",
+              "categoria": 0
+            },
+            {
+              "texto": "999",
+              "categoria": 1
+            },
+            {
+              "texto": "6.001",
+              "categoria": 0
+            }
+          ],
+          "explicacion": "5.010, 5.300 y 6.001 son mayores que 5.000. En cambio, 4.990 y 999 son menores.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l3-e09",
+          "unidad": 1,
+          "leccion": 3,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "comparar-numeros",
+          "caso": "En una carrera, Ana corrió 2.350 metros, Benja 2.530 metros y Coni 2.305 metros.",
+          "enunciado": "¿Quién corrió más metros?",
+          "opciones": [
+            "Benja",
+            "Ana",
+            "Coni",
+            "Los tres corrieron lo mismo"
+          ],
+          "respuesta": 0,
+          "explicacion": "Los tres tienen 2 unidades de mil. Benja tiene 5 centenas y los otros 3. Por eso 2.530 es el mayor.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l3-e10",
+          "unidad": 1,
+          "leccion": 3,
+          "tipo": "caso_practico",
+          "dificultad": 3,
+          "concepto": "comparar-numeros",
+          "caso": "Tres cursos juntaron latas para reciclar: el 4° A juntó 1.240, el 4° B juntó 1.420 y el 4° C juntó 1.204.",
+          "enunciado": "¿Cuál es el orden de menor a mayor?",
+          "opciones": [
+            "4° C, 4° A, 4° B",
+            "4° A, 4° B, 4° C",
+            "4° B, 4° A, 4° C",
+            "4° C, 4° B, 4° A"
+          ],
+          "respuesta": 0,
+          "explicacion": "1.204 < 1.240 < 1.420. De menor a mayor: 4° C, 4° A y 4° B.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        }
+      ]
+    }
+  ]
+}

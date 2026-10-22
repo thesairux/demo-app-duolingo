@@ -1,0 +1,358 @@
+[
+  {
+    "termino": "Unidad de mil",
+    "alias": [
+      "unidades de mil"
+    ],
+    "definicion": "Un grupo de 1.000. Diez centenas forman una unidad de mil. En 4.725, el 4 está en las unidades de mil.",
+    "unidad": 1,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 1",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Centena",
+    "alias": [
+      "centenas"
+    ],
+    "definicion": "Un grupo de 100. Diez decenas forman una centena.",
+    "unidad": 1,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 1",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Decena",
+    "alias": [
+      "decenas"
+    ],
+    "definicion": "Un grupo de 10. Diez unidades forman una decena.",
+    "unidad": 1,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 1",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Cifra",
+    "alias": [
+      "cifras"
+    ],
+    "definicion": "Cada uno de los símbolos del 0 al 9 con que escribimos los números. El 5.026 tiene cuatro cifras.",
+    "unidad": 1,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 1",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Valor posicional",
+    "definicion": "Lo que vale una cifra según el lugar donde está. En 3.333, el primer 3 vale 3.000 y el último vale 3.",
+    "unidad": 1,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 1",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Descomponer",
+    "alias": [
+      "descompón",
+      "descomposición"
+    ],
+    "definicion": "Separar un número en lo que vale cada cifra. 6.481 = 6.000 + 400 + 80 + 1.",
+    "unidad": 1,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 1",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Recta numérica",
+    "definicion": "Una línea donde los números están ordenados de menor a mayor, de izquierda a derecha.",
+    "unidad": 1,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 1",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Tablas de multiplicar",
+    "alias": [
+      "tablas"
+    ],
+    "definicion": "Las multiplicaciones del 1 al 10 que conviene saber de memoria, como 7 × 8 = 56.",
+    "unidad": 2,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 2",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Resto",
+    "definicion": "Lo que sobra en una división que no es exacta. En 17 : 5 = 3, sobran 2: ese es el resto.",
+    "unidad": 2,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 6",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Vuelto",
+    "definicion": "La plata que te devuelven cuando pagas con más de lo que cuesta algo. Se calcula restando.",
+    "unidad": 2,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 7",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Entero",
+    "alias": [
+      "enteros"
+    ],
+    "definicion": "La unidad completa que se divide en partes iguales: una pizza entera, una barra entera o un litro.",
+    "unidad": 3,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 8",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Fracción",
+    "alias": [
+      "fracciones"
+    ],
+    "definicion": "Un número que indica partes iguales de un entero, como 3/4: tres de cuatro partes iguales.",
+    "unidad": 3,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 8",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Numerador",
+    "alias": [
+      "numeradores"
+    ],
+    "definicion": "El número de arriba de una fracción. Dice cuántas partes tomas.",
+    "unidad": 3,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 8",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Denominador",
+    "alias": [
+      "denominadores"
+    ],
+    "definicion": "El número de abajo de una fracción. Dice en cuántas partes iguales se dividió el entero.",
+    "unidad": 3,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 8",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Décimo",
+    "alias": [
+      "décimos"
+    ],
+    "definicion": "Una de las 10 partes iguales de un entero. Se escribe 1/10 o 0,1.",
+    "unidad": 3,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 11",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Centésimo",
+    "alias": [
+      "centésimos"
+    ],
+    "definicion": "Una de las 100 partes iguales de un entero. Se escribe 1/100 o 0,01.",
+    "unidad": 3,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 11",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Número decimal",
+    "alias": [
+      "números decimales",
+      "decimal"
+    ],
+    "definicion": "Un número con coma. A la izquierda de la coma van los enteros y a la derecha, los décimos y centésimos.",
+    "unidad": 3,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 11",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "AM",
+    "definicion": "Las horas desde la medianoche hasta el mediodía. Las 8:00 AM son en la mañana.",
+    "unidad": 4,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 20",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "PM",
+    "definicion": "Las horas desde el mediodía hasta la medianoche. Las 8:00 PM son en la noche.",
+    "unidad": 4,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 20",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Perímetro",
+    "definicion": "La medida del borde de una figura. Se calcula sumando lo que mide cada lado.",
+    "unidad": 4,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 22",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Área",
+    "definicion": "Lo que ocupa una figura por dentro. En un rectángulo es largo × ancho, y se mide en cm² o m².",
+    "unidad": 4,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 23",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Ángulo recto",
+    "alias": [
+      "ángulos rectos"
+    ],
+    "definicion": "Un ángulo de 90°, como la esquina de un cuaderno.",
+    "unidad": 4,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 19",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Ángulo agudo",
+    "alias": [
+      "agudo",
+      "agudos"
+    ],
+    "definicion": "Un ángulo más cerrado que el recto: mide menos de 90°.",
+    "unidad": 4,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 19",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Ángulo obtuso",
+    "alias": [
+      "obtuso",
+      "obtusos"
+    ],
+    "definicion": "Un ángulo más abierto que el recto: mide más de 90° y menos de 180°.",
+    "unidad": 4,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 19",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Transportador",
+    "definicion": "Una regla con forma de media luna que sirve para medir ángulos en grados.",
+    "unidad": 4,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 19",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Eje de simetría",
+    "alias": [
+      "ejes de simetría"
+    ],
+    "definicion": "La línea por donde doblas una figura para que sus dos mitades calcen justo.",
+    "unidad": 4,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 17",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  },
+  {
+    "termino": "Simétrica",
+    "alias": [
+      "simétricas",
+      "simétrico"
+    ],
+    "definicion": "Una figura que, doblada por una línea, queda con sus dos mitades iguales.",
+    "unidad": 4,
+    "fuente": {
+      "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+      "seccion": "OA 17",
+      "fueraDelMaterial": false
+    },
+    "revisar": false
+  }
+]
