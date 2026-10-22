@@ -9,7 +9,11 @@ export type TipoEjercicio =
   | 'ordenar'
   | 'caso_practico'
   | 'identificar_error'
-  | 'clasificar';
+  | 'clasificar'
+  | 'recta_numerica'
+  | 'reloj'
+  | 'fraccion_visual'
+  | 'bloques';
 
 /** 1 = 👑 lo básico · 2 = 👑👑 un poco más · 3 = 👑👑👑 problemas de la vida real */
 export type Dificultad = 1 | 2 | 3;
@@ -106,6 +110,45 @@ export interface Clasificar extends EjercicioBase {
   elementos: { texto: string; categoria: number }[];
 }
 
+/** Arrastrar un punto por la recta numérica hasta un número. El punto parte en `min`. */
+export interface RectaNumerica extends EjercicioBase {
+  tipo: 'recta_numerica';
+  min: number;
+  max: number;
+  /** Cuánto vale cada rayita. Entre `min` y `max` caben de 4 a 20 rayitas. */
+  paso: number;
+  /** Cada cuántas rayitas se escribe el número. Las dos puntas siempre lo llevan. */
+  etiquetaCada: number;
+  /** Dónde va el punto: una rayita entre `min` (sin incluirlo) y `max`. */
+  respuesta: number;
+}
+
+/** Mover los punteros de un reloj hasta una hora. El reloj parte en las 12:00. */
+export interface Reloj extends EjercicioBase {
+  tipo: 'reloj';
+  /** De 1 a 12. */
+  hora: number;
+  /** Múltiplo de 5, de 0 a 55. */
+  minutos: number;
+}
+
+/** Tocar las partes de una pizza (círculo) o de una barra para pintar una fracción. */
+export interface FraccionVisual extends EjercicioBase {
+  tipo: 'fraccion_visual';
+  figura: 'circulo' | 'barra';
+  /** En cuántas partes iguales está dividida la figura (denominador), de 2 a 12. */
+  partes: number;
+  /** Cuántas partes hay que pintar (numerador). */
+  respuesta: number;
+}
+
+/** Armar un número con bloques de mil, de cien, de diez y de uno (máximo 9 de cada uno). */
+export interface Bloques extends EjercicioBase {
+  tipo: 'bloques';
+  /** El número que hay que armar, de 1 a 9.999. */
+  respuesta: number;
+}
+
 export type Ejercicio =
   | SeleccionMultiple
   | VerdaderoFalso
@@ -114,7 +157,11 @@ export type Ejercicio =
   | Ordenar
   | CasoPractico
   | IdentificarError
-  | Clasificar;
+  | Clasificar
+  | RectaNumerica
+  | Reloj
+  | FraccionVisual
+  | Bloques;
 
 /** Tarjeta de la guía: la mini lección que se lee antes de practicar. */
 export interface TarjetaGuia {

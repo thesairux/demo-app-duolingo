@@ -281,6 +281,60 @@
             "fueraDelMaterial": false
           },
           "revisar": false
+        },
+        {
+          "id": "u4-l1-e11",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "reloj",
+          "dificultad": 1,
+          "concepto": "tiempo",
+          "enunciado": "Pon el reloj a las 3:00.",
+          "hora": 3,
+          "minutos": 0,
+          "explicacion": "A las 3:00, el puntero largo apunta al 12 y el corto apunta al 3.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l1-e12",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "reloj",
+          "dificultad": 1,
+          "concepto": "tiempo",
+          "enunciado": "Pon el reloj a las 7:30.",
+          "hora": 7,
+          "minutos": 30,
+          "explicacion": "A las 7:30, el puntero largo apunta al 6 (media hora) y el corto queda entre el 7 y el 8.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l1-e13",
+          "unidad": 4,
+          "leccion": 1,
+          "tipo": "reloj",
+          "dificultad": 2,
+          "concepto": "tiempo",
+          "enunciado": "Pon el reloj a las 16:45.",
+          "hora": 4,
+          "minutos": 45,
+          "explicacion": "16:45 son las 4:45 de la tarde: el puntero largo apunta al 9 y el corto queda casi en el 5.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 20 y OA 21",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
         }
       ]
     },
@@ -857,6 +911,24 @@
           ],
           "respuesta": 0,
           "explicacion": "Entre dos números seguidos del reloj hay 30°. Del 12 al 4 hay 4 × 30° = 120°: es un ángulo obtuso.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 17 y OA 19",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u4-l3-e11",
+          "unidad": 4,
+          "leccion": 3,
+          "tipo": "reloj",
+          "dificultad": 1,
+          "concepto": "angulos",
+          "enunciado": "Pon el reloj a las 9:00. Los punteros formarán un ángulo recto.",
+          "hora": 9,
+          "minutos": 0,
+          "explicacion": "A las 9:00, el puntero largo apunta al 12 y el corto al 9. Entre ellos se forma un ángulo recto de 90°.",
           "fuente": {
             "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
             "seccion": "OA 17 y OA 19",

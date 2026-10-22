@@ -5,7 +5,7 @@ import { Boton } from '../components/Boton';
 import { CofreAnimado, type FaseCofre } from '../components/CofreAnimado';
 import { Confeti } from '../components/Confeti';
 import { Hoja } from '../components/Hoja';
-import { IconoCamara, IconoCorona, IconoGema } from '../components/Iconos';
+import { IconoCorona, IconoGema, IconoLapiz, IconoRayo } from '../components/Iconos';
 import { Numi, type Expresion } from '../components/Numi';
 import { NodoEspecial, NodoLeccion, type EstadoEspecial } from '../components/NodoCamino';
 import { LECCIONES, leccionesDeUnidad, UNIDADES, type LeccionUbicada } from '../content';
@@ -32,7 +32,8 @@ export type AccionCamino =
   | { tipo: 'leccion' | 'guia' | 'repaso' | 'legendario'; leccionId: string }
   | { tipo: 'checkpoint'; unidad: number }
   | { tipo: 'practicar' }
-  | { tipo: 'cuaderno' };
+  | { tipo: 'cuaderno' }
+  | { tipo: 'desafio' };
 
 function colorUnidad(n: number): CSSProperties {
   return { '--unidad': `var(--u${n})`, '--unidad-oscuro': `color-mix(in srgb, var(--u${n}) 62%, #000)` } as CSSProperties;
@@ -111,19 +112,22 @@ export function Camino({ onAccion }: { onAccion: (accion: AccionCamino) => void 
           </div>
         </section>
 
-        <button
-          type="button"
-          onClick={() => onAccion({ tipo: 'cuaderno' })}
-          className="opcion grid grid-cols-[44px_minmax(0,1fr)] items-center gap-3 rounded-[22px] px-4 py-3 text-left"
-        >
-          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-select-soft text-select">
-            <IconoCamara className="h-6 w-6" />
-          </span>
-          <span className="grid gap-0.5">
+        <div className="grid grid-cols-2 gap-3">
+          <button type="button" onClick={() => onAccion({ tipo: 'desafio' })} className="opcion grid content-start gap-1.5 rounded-[22px] p-3.5 text-left">
+            <span className="grid h-10 w-10 place-items-center rounded-2xl bg-amber-soft">
+              <IconoRayo className="h-6 w-6" />
+            </span>
+            <span className="font-display text-lg font-semibold leading-tight">Desafío relámpago</span>
+            <span className="text-[13px] font-semibold leading-snug text-muted">Cálculo mental en 60 segundos.{estado.mejorDesafio > 0 ? ` Récord: ${estado.mejorDesafio}.` : ''}</span>
+          </button>
+          <button type="button" onClick={() => onAccion({ tipo: 'cuaderno' })} className="opcion grid content-start gap-1.5 rounded-[22px] p-3.5 text-left">
+            <span className="grid h-10 w-10 place-items-center rounded-2xl bg-select-soft">
+              <IconoLapiz className="h-6 w-6" />
+            </span>
             <span className="font-display text-lg font-semibold leading-tight">Resuelve en tu cuaderno</span>
-            <span className="text-sm font-semibold text-muted">Haz ejercicios con lápiz y sácales una foto: Numi revisa si están bien.</span>
-          </span>
-        </button>
+            <span className="text-[13px] font-semibold leading-snug text-muted">Ejercicios con lápiz que Numi revisa.</span>
+          </button>
+        </div>
 
         {UNIDADES.map((unidad) => {
           const deUnidad = leccionesDeUnidad(unidad.unidad);

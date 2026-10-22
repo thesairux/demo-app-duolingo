@@ -282,6 +282,44 @@
             "fueraDelMaterial": false
           },
           "revisar": false
+        },
+        {
+          "id": "u3-l1-e11",
+          "unidad": 3,
+          "leccion": 1,
+          "tipo": "fraccion_visual",
+          "dificultad": 1,
+          "concepto": "fracciones",
+          "enunciado": "Pinta 3/8 de la pizza.",
+          "figura": "circulo",
+          "partes": 8,
+          "respuesta": 3,
+          "explicacion": "La pizza tiene 8 partes iguales (el denominador). Hay que pintar 3 de ellas (el numerador).",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l1-e12",
+          "unidad": 3,
+          "leccion": 1,
+          "tipo": "fraccion_visual",
+          "dificultad": 1,
+          "concepto": "fracciones",
+          "enunciado": "Pinta 2/5 de la barra.",
+          "figura": "barra",
+          "partes": 5,
+          "respuesta": 2,
+          "explicacion": "La barra tiene 5 partes iguales y hay que pintar 2: eso es 2/5.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
         }
       ]
     },
@@ -569,6 +607,25 @@
             "fueraDelMaterial": false
           },
           "revisar": false
+        },
+        {
+          "id": "u3-l2-e11",
+          "unidad": 3,
+          "leccion": 2,
+          "tipo": "fraccion_visual",
+          "dificultad": 2,
+          "concepto": "operar-fracciones",
+          "enunciado": "Pinta el resultado de 2/6 + 3/6.",
+          "figura": "circulo",
+          "partes": 6,
+          "respuesta": 5,
+          "explicacion": "2/6 + 3/6 = 5/6, porque se suman los numeradores. Hay que pintar 5 de las 6 partes.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 8 y OA 9",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
         }
       ]
     },
@@ -843,6 +900,46 @@
           ],
           "respuesta": 0,
           "explicacion": "Se suman los décimos: 4 décimos + 3 décimos = 7 décimos. En el frasco hay 0,7 litros.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 11 y OA 12",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l3-e11",
+          "unidad": 3,
+          "leccion": 3,
+          "tipo": "recta_numerica",
+          "dificultad": 1,
+          "concepto": "decimales",
+          "enunciado": "Arrastra el punto hasta el 0,7.",
+          "min": 0,
+          "max": 1,
+          "paso": 0.1,
+          "etiquetaCada": 5,
+          "respuesta": 0.7,
+          "explicacion": "Entre 0 y 1 hay 10 rayitas: cada una es un décimo (0,1). El 0,7 está 7 rayitas después del 0.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 11 y OA 12",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u3-l3-e12",
+          "unidad": 3,
+          "leccion": 3,
+          "tipo": "fraccion_visual",
+          "dificultad": 1,
+          "concepto": "decimales",
+          "enunciado": "Pinta 0,3 de la barra.",
+          "figura": "barra",
+          "partes": 10,
+          "respuesta": 3,
+          "explicacion": "La barra tiene 10 partes iguales: cada una es 0,1. Para pintar 0,3 se pintan 3 partes.",
           "fuente": {
             "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
             "seccion": "OA 11 y OA 12",

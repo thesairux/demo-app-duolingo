@@ -9,6 +9,7 @@ import type { ModoSesion } from './lib/sesion';
 import { Bienvenida } from './screens/Bienvenida';
 import { Camino, type AccionCamino } from './screens/Camino';
 import { Cuaderno } from './screens/Cuaderno';
+import { Desafio } from './screens/Desafio';
 import { Guia } from './screens/Guia';
 import { Logros } from './screens/Logros';
 import { Perfil } from './screens/Perfil';
@@ -21,6 +22,7 @@ type Ruta =
   | { pantalla: 'pestanas' }
   | { pantalla: 'guia'; leccionId: string; luegoPracticar: boolean }
   | { pantalla: 'cuaderno' }
+  | { pantalla: 'desafio' }
   | { pantalla: 'sesion'; modo: ModoSesion; intento: number }
   | { pantalla: 'resultado'; datos: DatosResultado };
 
@@ -40,6 +42,8 @@ export function App() {
         return setPestana('practicar');
       case 'cuaderno':
         return setRuta({ pantalla: 'cuaderno' });
+      case 'desafio':
+        return setRuta({ pantalla: 'desafio' });
       case 'guia':
         return setRuta({ pantalla: 'guia', leccionId: a.leccionId, luegoPracticar: coronasDe(estado.lecciones, a.leccionId) === 0 });
       case 'leccion':
@@ -68,21 +72,16 @@ export function App() {
     case 'resultado':
       return <Resultado datos={ruta.datos} onContinuar={volver} />;
     case 'cuaderno':
-      return (
-        <Cuaderno
-          onSalir={() => {
-            setPestana('practicar');
-            volver();
-          }}
-        />
-      );
+      return <Cuaderno onSalir={volver} />;
+    case 'desafio':
+      return <Desafio onSalir={volver} />;
   }
 
   const hayRepaso = pendientes(estado.ejercicios, claveDia()).length > 0;
   return (
     <>
       {pestana === 'camino' && <Camino onAccion={accionCamino} />}
-      {pestana === 'practicar' && <Practicar onEmpezar={empezar} onCuaderno={() => setRuta({ pantalla: 'cuaderno' })} />}
+      {pestana === 'practicar' && <Practicar onEmpezar={empezar} onCuaderno={() => setRuta({ pantalla: 'cuaderno' })} onDesafio={() => setRuta({ pantalla: 'desafio' })} />}
       {pestana === 'logros' && <Logros />}
       {pestana === 'tienda' && <Tienda />}
       {pestana === 'perfil' && <Perfil onPracticar={() => setPestana('practicar')} />}

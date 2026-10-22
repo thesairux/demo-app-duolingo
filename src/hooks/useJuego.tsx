@@ -3,19 +3,20 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import { borrarEstado, cargarEstado, guardarEstado } from '../lib/almacen';
 import {
   abrirCofre as abrirCofreLib,
-  aplicarCuaderno,
+  aplicarActividad,
   aplicarSesion,
   comprar as comprarLib,
   estadoInicial,
   quitarAccesorio as quitarAccesorioLib,
   usarComodin as usarComodinLib,
   type Articulo,
-  type EfectosCuaderno,
+  type EfectosActividad,
   type EfectosSesion,
   type EstadoJuego,
   type MetaDiaria,
   type ResultadoSesion,
 } from '../lib/estado';
+import { XP_MAX_DESAFIO } from '../lib/desafio';
 import { claveDia } from '../lib/fechas';
 import type { Logro } from '../lib/logros';
 import { GORROS, type Ranura } from '../lib/tienda';
@@ -28,7 +29,9 @@ interface ContextoJuego {
   perderVida: () => number;
   terminarSesion: (resultado: ResultadoSesion) => EfectosSesion;
   /** Suma la XP de una hoja del cuaderno revisada. */
-  terminarCuaderno: (xp: number, nuevaHoja: boolean) => EfectosCuaderno;
+  terminarCuaderno: (xp: number, nuevaHoja: boolean) => EfectosActividad;
+  /** Guarda el resultado de un desafío relámpago: XP, racha y récord. */
+  terminarDesafio: (aciertos: number) => EfectosActividad;
   abrirCofre: (unidad: number) => { gemas: number; logrosNuevos: Logro[] };
   comprar: (articulo: Articulo) => string | undefined;
   quitarAccesorio: (ranura: Ranura) => void;
@@ -99,7 +102,20 @@ export function ProveedorJuego({ children }: { children: ReactNode }) {
 
   const terminarCuaderno = useCallback(
     (xp: number, nuevaHoja: boolean) => {
-      const { estado: nuevo, efectos } = aplicarCuaderno(ref.current, { xp, nuevaHoja }, Date.now());
+      const { estado: nuevo, efectos } = aplicarActividad(ref.current, { xp, practica: nuevaHoja, hojaCuaderno: nuevaHoja }, Date.now());
+      actualizar(nuevo);
+      return efectos;
+    },
+    [actualizar],
+  );
+
+  const terminarDesafio = useCallback(
+    (aciertos: number) => {
+      const { estado: nuevo, efectos } = aplicarActividad(
+        ref.current,
+        { xp: Math.min(aciertos, XP_MAX_DESAFIO), practica: aciertos > 0, puntajeDesafio: aciertos },
+        Date.now(),
+      );
       actualizar(nuevo);
       return efectos;
     },
@@ -155,6 +171,7 @@ export function ProveedorJuego({ children }: { children: ReactNode }) {
       perderVida,
       terminarSesion,
       terminarCuaderno,
+      terminarDesafio,
       abrirCofre,
       comprar,
       quitarAccesorio,
@@ -163,7 +180,7 @@ export function ProveedorJuego({ children }: { children: ReactNode }) {
       alternarAnimaciones,
       reiniciar,
     }),
-    [estado, crearPerfil, cambiarMeta, perderVida, terminarSesion, terminarCuaderno, abrirCofre, comprar, quitarAccesorio, usarComodin, alternarSonido, alternarAnimaciones, reiniciar],
+    [estado, crearPerfil, cambiarMeta, perderVida, terminarSesion, terminarCuaderno, terminarDesafio, abrirCofre, comprar, quitarAccesorio, usarComodin, alternarSonido, alternarAnimaciones, reiniciar],
   );
   return <Contexto.Provider value={valor}>{children}</Contexto.Provider>;
 }

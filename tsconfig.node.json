@@ -12,5 +12,5 @@
     "noEmit": true,
     "types": ["node"]
   },
-  "include": ["vite.config.ts", "netlify/functions/*.mts"]
+  "include": ["vite.config.ts"]
 }

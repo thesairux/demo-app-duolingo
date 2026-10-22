@@ -1,11 +1,15 @@
 // Muestra el ejercicio que corresponda según su tipo, con su etiqueta arriba.
 import type { Ejercicio, TipoEjercicio } from '../../content/types';
+import { Bloques } from './Bloques';
 import { Clasificar } from './Clasificar';
 import { Completar } from './Completar';
 import { EncontrarError } from './EncontrarError';
+import { FraccionVisual } from './FraccionVisual';
 import { Opciones } from './Opciones';
 import { Ordenar } from './Ordenar';
 import { Pares } from './Pares';
+import { RectaNumerica } from './RectaNumerica';
+import { Reloj } from './Reloj';
 import { VerdaderoFalso } from './VerdaderoFalso';
 import type { PropsEjercicio } from './comun';
 
@@ -18,6 +22,10 @@ export const NOMBRE_TIPO: Record<TipoEjercicio, string> = {
   ordenar: 'Ordena',
   identificar_error: 'Encuentra el error',
   clasificar: 'Clasifica',
+  recta_numerica: 'Ubica en la recta',
+  reloj: 'Mueve los punteros',
+  fraccion_visual: 'Pinta la fracción',
+  bloques: 'Arma con bloques',
 };
 
 export function VistaEjercicio(props: PropsEjercicio<Ejercicio>) {
@@ -52,5 +60,13 @@ function cuerpo(props: PropsEjercicio<Ejercicio>) {
       return <EncontrarError {...props} ej={ej} />;
     case 'clasificar':
       return <Clasificar {...props} ej={ej} />;
+    case 'recta_numerica':
+      return <RectaNumerica {...props} ej={ej} />;
+    case 'reloj':
+      return <Reloj {...props} ej={ej} />;
+    case 'fraccion_visual':
+      return <FraccionVisual {...props} ej={ej} />;
+    case 'bloques':
+      return <Bloques {...props} ej={ej} />;
   }
 }

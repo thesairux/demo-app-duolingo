@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { LECCIONES, UNIDADES } from '../content';
 import type { Ejercicio } from '../content/types';
 import { semilla } from './azar';
-import { evaluar, normalizar, type Respuesta } from './evaluar';
+import { bloquesDe, evaluar, normalizar, type Respuesta } from './evaluar';
 import { claveDia, diasEntre, sumarDias } from './fechas';
 import { estadoRacha, registrarPractica } from './racha';
 import { armarSesion, dificultadObjetivo, EJERCICIOS_POR_SESION } from './sesion';
@@ -167,6 +167,14 @@ describe('contenido', () => {
           return { tipo: 'segmento', indice: e.respuesta };
         case 'clasificar':
           return { tipo: 'clasificacion', categorias: e.elementos.map((el) => el.categoria) };
+        case 'recta_numerica':
+          return { tipo: 'valor', valor: e.respuesta };
+        case 'reloj':
+          return { tipo: 'hora', hora: e.hora, minutos: e.minutos };
+        case 'fraccion_visual':
+          return { tipo: 'partes', cantidad: e.respuesta };
+        case 'bloques':
+          return { tipo: 'bloques', cantidades: bloquesDe(e.respuesta) };
       }
     };
     const mal = UNIDADES.flatMap((u) => u.lecciones.flatMap((l) => l.ejercicios)).filter((e) => !evaluar(e, correcta(e)).correcta);

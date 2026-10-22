@@ -140,13 +140,6 @@ export const IconoReloj = (p: P) => (
   </svg>
 );
 
-export const IconoCamara = (p: P) => (
-  <svg {...base(p)} fill="none">
-    <path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.8l1.4-2h4.6l1.4 2h1.8A2.5 2.5 0 0 1 20 8.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5z" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
-    <circle cx="12" cy="12.5" r="3.4" stroke="currentColor" strokeWidth="2.2" />
-  </svg>
-);
-
 export const IconoLapiz = (p: P) => (
   <svg {...base(p)}>
     <path d="M15.6 3.6a2 2 0 0 1 2.8 0l2 2a2 2 0 0 1 0 2.8L9.2 19.6 4 20.5l.9-5.2z" fill="var(--amber)" />

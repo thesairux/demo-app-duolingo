@@ -2,7 +2,7 @@
 import { useMemo, useState } from 'react';
 import { BarraSuperior } from '../components/BarraSuperior';
 import { Boton } from '../components/Boton';
-import { IconoCamara, IconoCorazon, IconoReloj } from '../components/Iconos';
+import { IconoCorazon, IconoLapiz, IconoRayo, IconoReloj } from '../components/Iconos';
 import { Numi } from '../components/Numi';
 import { LECCIONES, UNIDADES } from '../content';
 import { useJuego } from '../hooks/useJuego';
@@ -13,7 +13,7 @@ import { SEGUNDOS_POR_PREGUNTA_EXAMEN, type ModoSesion } from '../lib/sesion';
 
 const CANTIDADES = [5, 10, 15];
 
-export function Practicar({ onEmpezar, onCuaderno }: { onEmpezar: (modo: ModoSesion) => void; onCuaderno: () => void }) {
+export function Practicar({ onEmpezar, onCuaderno, onDesafio }: { onEmpezar: (modo: ModoSesion) => void; onCuaderno: () => void; onDesafio: () => void }) {
   const { estado } = useJuego();
   const hoy = claveDia();
   const vistos = Object.keys(estado.ejercicios).length;
@@ -38,18 +38,33 @@ export function Practicar({ onEmpezar, onCuaderno }: { onEmpezar: (modo: ModoSes
       <main className="mx-auto grid max-w-xl gap-6 px-4 pb-28 pt-5">
         <h1 className="text-3xl font-bold">Practicar</h1>
 
+        <section className="grid gap-4 rounded-[22px] border-2 border-line bg-surface p-5" aria-labelledby="t-desafio">
+          <div className="grid gap-1">
+            <h2 id="t-desafio" className="flex items-center gap-2 text-2xl font-bold">
+              <IconoRayo className="h-7 w-7" />
+              Desafío relámpago
+            </h2>
+            <p className="text-muted">60 segundos de cálculo mental: tablas, dobles, mitades y decenas. Mientras más aciertas, más difícil se pone.</p>
+          </div>
+          {estado.mejorDesafio > 0 && (
+            <p className="rounded-2xl bg-surface-2 px-3 py-2 text-sm font-bold">
+              Tu récord: <span className="font-black tabular-nums">{estado.mejorDesafio}</span> cálculos correctos
+            </p>
+          )}
+          <Boton ancho onClick={onDesafio}>
+            Jugar desafío
+          </Boton>
+        </section>
+
         <section className="grid gap-4 rounded-[22px] border-2 border-line bg-surface p-5" aria-labelledby="t-cuaderno">
           <div className="grid gap-1">
             <h2 id="t-cuaderno" className="flex items-center gap-2 text-2xl font-bold">
-              <IconoCamara className="h-7 w-7" />
+              <IconoLapiz className="h-7 w-7" />
               Resuelve en tu cuaderno
             </h2>
-            <p className="text-muted">
-              Numi te da 4 ejercicios para hacer con lápiz. Cuando termines, le sacas una foto a tu cuaderno y Numi revisa si están bien. Si no
-              puedes sacar fotos, revisas tú con las respuestas.
-            </p>
+            <p className="text-muted">Numi te da 4 ejercicios para hacer con lápiz. Cuando termines, escribes tus resultados y Numi te dice cuáles están bien.</p>
           </div>
-          <Boton ancho onClick={onCuaderno}>
+          <Boton ancho variante="suave" onClick={onCuaderno}>
             Elegir ejercicios
           </Boton>
         </section>

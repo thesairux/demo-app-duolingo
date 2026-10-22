@@ -1,6 +1,6 @@
-// Hojas para resolver en el cuaderno: se generan al azar, Claude lee la foto y la app corrige.
-// Este archivo no usa nada del navegador: también lo usa el corrector del servidor (netlify/functions).
+// Hojas para resolver en el cuaderno: se generan al azar, el niño escribe sus resultados en la app y la app los corrige.
 import { elegir, type Aleatorio } from './azar';
+import { formatoNumero } from './numeros';
 
 export type TemaCuaderno = 'sumas-restas' | 'multiplicar' | 'dividir' | 'fracciones' | 'mezcla';
 
@@ -38,33 +38,21 @@ export interface HojaCuaderno {
   ejercicios: EjercicioCuaderno[];
 }
 
-/** Lo que Claude leyó en la foto: el resultado escrito en cada ejercicio, o null si no se pudo leer. */
-export interface LecturaHoja {
-  hayEjercicios: boolean;
-  ejercicios: { numero: number; leido: string | null }[];
-}
-
-export type EstadoRevision = 'bien' | 'mal' | 'sin-leer';
+export type EstadoRevision = 'bien' | 'mal' | 'en-blanco';
 
 export interface RevisionEjercicio {
   ejercicio: EjercicioCuaderno;
   estado: EstadoRevision;
+  /** Lo que escribió el niño, o null si lo dejó en blanco. */
   leido: string | null;
   /** Un detalle para el niño, por ejemplo que le faltó anotar el resto. */
   nota?: string;
 }
 
 export const EJERCICIOS_POR_HOJA = 4;
-/** XP por ejercicio bien revisado con foto, y extra si la hoja sale perfecta. */
-export const XP_FOTO = 2;
+/** XP por ejercicio bien, y extra si la hoja sale perfecta. */
+export const XP_BIEN = 2;
 export const XP_HOJA_PERFECTA = 5;
-/** XP por ejercicio que el niño marca como bien al revisar él mismo (sin foto). */
-export const XP_MANUAL = 1;
-
-/** Escribe un número como en Chile: 1012 → "1.012". */
-export function formatoNumero(n: number): string {
-  return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-}
 
 export function textoSolucion(s: Solucion): string {
   switch (s.tipo) {
@@ -168,81 +156,9 @@ export function armarHoja(tema: TemaCuaderno, aleatorio: Aleatorio = Math.random
   return { tema, ejercicios };
 }
 
-// ---------- Lectura de la foto ----------
-
-/** Lo mínimo que necesita el lector: el número y el enunciado de cada ejercicio. */
-export type EjercicioALeer = Pick<EjercicioCuaderno, 'numero' | 'enunciado'>;
-
-/** Enunciados válidos: solo números y signos, para que nadie pueda colar otras instrucciones al corrector. */
-const ENUNCIADO_VALIDO = /^[0-9 .+−×:/=]{3,30}$/;
-
-export function ejerciciosValidos(valor: unknown): valor is EjercicioALeer[] {
-  return (
-    Array.isArray(valor) &&
-    valor.length >= 1 &&
-    valor.length <= 6 &&
-    valor.every((e, i) => e && e.numero === i + 1 && typeof e.enunciado === 'string' && ENUNCIADO_VALIDO.test(e.enunciado))
-  );
-}
-
-/** Las instrucciones para Claude. Le pedimos solo que lea: la corrección la hace la app, que no se equivoca en las cuentas. */
-export function promptLectura(ejercicios: EjercicioALeer[]): string {
-  return [
-    'Eres el ayudante de una app de matemática para niños de 4° básico en Chile.',
-    'La foto muestra el cuaderno de un niño o una niña que resolvió a mano estos ejercicios:',
-    '',
-    ...ejercicios.map((e) => `${e.numero}) ${e.enunciado}`),
-    '',
-    'Tu tarea es solo LEER lo que escribió. No corrijas ni hagas las cuentas.',
-    '- Para cada número de ejercicio, copia el resultado final que escribió: el número encerrado en un círculo o, si no hay, el que está después del signo = o al final de su desarrollo.',
-    '- Copia exactamente lo que ves, aunque esté mal. No lo arregles.',
-    '- Si en una división anotó un resto, inclúyelo así: "9 resto 5".',
-    '- Escribe las fracciones así: "7/10".',
-    '- Si un ejercicio no aparece, está tapado o no se lee con seguridad, usa null.',
-    '- Si la foto no muestra ejercicios escritos a mano, responde "hayEjercicios": false.',
-    '',
-    'Responde solo con JSON, con esta forma:',
-    '{"hayEjercicios": true, "ejercicios": [{"numero": 1, "leido": "623"}, {"numero": 2, "leido": null}]}',
-  ].join('\n');
-}
-
-/** El mismo formato, como esquema JSON, para pedirle a la API una respuesta que siempre calce. */
-export const ESQUEMA_LECTURA = {
-  type: 'object',
-  additionalProperties: false,
-  required: ['hayEjercicios', 'ejercicios'],
-  properties: {
-    hayEjercicios: { type: 'boolean' },
-    ejercicios: {
-      type: 'array',
-      items: {
-        type: 'object',
-        additionalProperties: false,
-        required: ['numero', 'leido'],
-        properties: { numero: { type: 'integer' }, leido: { anyOf: [{ type: 'string' }, { type: 'null' }] } },
-      },
-    },
-  },
-} as const;
-
-/** Revisa que la respuesta de Claude tenga la forma pedida. Devuelve null si no sirve. */
-export function validarLectura(valor: unknown, ejercicios: EjercicioALeer[]): LecturaHoja | null {
-  if (!valor || typeof valor !== 'object') return null;
-  const v = valor as { hayEjercicios?: unknown; ejercicios?: unknown };
-  if (typeof v.hayEjercicios !== 'boolean' || !Array.isArray(v.ejercicios)) return null;
-  const leidos = new Map<number, string | null>();
-  for (const e of v.ejercicios) {
-    if (!e || typeof e !== 'object') continue;
-    const { numero, leido } = e as { numero?: unknown; leido?: unknown };
-    if (typeof numero !== 'number') continue;
-    leidos.set(numero, typeof leido === 'string' && leido.trim() ? leido.trim().slice(0, 40) : null);
-  }
-  return { hayEjercicios: v.hayEjercicios, ejercicios: ejercicios.map((e) => ({ numero: e.numero, leido: leidos.get(e.numero) ?? null })) };
-}
-
 // ---------- Corrección ----------
 
-/** Los números enteros que aparecen en lo leído, después del último "=". El punto de los miles no corta el número. */
+/** Los números enteros que aparecen en lo escrito, después del último "=". El punto de los miles no corta el número. */
 function enteros(leido: string): number[] {
   const final = leido.slice(leido.lastIndexOf('=') + 1);
   const limpio = final.replace(/(\d)[.\s](?=\d{3}(?!\d))/g, '$1').replace(/(\d)\s+(?=\d)/g, '$1');
@@ -252,17 +168,17 @@ function enteros(leido: string): number[] {
 /** Compara lo que escribió el niño con la solución. */
 export function revisarEjercicio(ejercicio: EjercicioCuaderno, leido: string | null): RevisionEjercicio {
   const base = { ejercicio, leido };
-  if (!leido) return { ...base, estado: 'sin-leer' };
+  if (!leido) return { ...base, estado: 'en-blanco' };
   const s = ejercicio.solucion;
   switch (s.tipo) {
     case 'entero': {
       const n = enteros(leido);
-      if (!n.length) return { ...base, estado: 'sin-leer' };
+      if (!n.length) return { ...base, estado: 'en-blanco' };
       return { ...base, estado: n[n.length - 1] === s.valor ? 'bien' : 'mal' };
     }
     case 'division': {
       const [cociente, resto] = enteros(leido);
-      if (cociente === undefined) return { ...base, estado: 'sin-leer' };
+      if (cociente === undefined) return { ...base, estado: 'en-blanco' };
       if (cociente !== s.cociente) return { ...base, estado: 'mal' };
       if (resto === undefined && s.resto > 0) return { ...base, estado: 'mal', nota: `El ${s.cociente} está bien, pero te faltó anotar que sobran ${s.resto}.` };
       return { ...base, estado: (resto ?? 0) === s.resto ? 'bien' : 'mal' };
@@ -270,7 +186,7 @@ export function revisarEjercicio(ejercicio: EjercicioCuaderno, leido: string | n
     case 'fraccion': {
       const todas = [...leido.matchAll(/(\d+)\s*\/\s*(\d+)/g)];
       const ultima = todas[todas.length - 1];
-      if (!ultima) return { ...base, estado: 'sin-leer' };
+      if (!ultima) return { ...base, estado: 'en-blanco' };
       const [n, d] = [Number(ultima[1]), Number(ultima[2])];
       if (d === 0) return { ...base, estado: 'mal' };
       if (n * s.denominador !== s.numerador * d) return { ...base, estado: 'mal' };
@@ -280,12 +196,29 @@ export function revisarEjercicio(ejercicio: EjercicioCuaderno, leido: string | n
   }
 }
 
-export function revisarHoja(hoja: HojaCuaderno, lectura: LecturaHoja): RevisionEjercicio[] {
-  return hoja.ejercicios.map((e) => revisarEjercicio(e, lectura.ejercicios.find((l) => l.numero === e.numero)?.leido ?? null));
+/**
+ * Junta lo que el niño escribió en las casillas de un ejercicio: un número, o cociente y resto,
+ * o numerador y denominador. Devuelve null si falta la casilla principal.
+ */
+export function unirCasillas(ejercicio: EjercicioCuaderno, casillas: string[]): string | null {
+  const [a = '', b = ''] = casillas.map((c) => c.trim());
+  switch (ejercicio.solucion.tipo) {
+    case 'entero':
+      return a || null;
+    case 'division':
+      return a ? (b ? `${a} resto ${b}` : a) : null;
+    case 'fraccion':
+      return a && b ? `${a}/${b}` : null;
+  }
 }
 
-/** XP que vale una revisión con foto: 2 por ejercicio bien y 5 más si están todos bien. */
+/** Revisa la hoja completa con lo escrito en las casillas de cada ejercicio. */
+export function revisarHoja(hoja: HojaCuaderno, casillas: string[][]): RevisionEjercicio[] {
+  return hoja.ejercicios.map((e, i) => revisarEjercicio(e, unirCasillas(e, casillas[i] ?? [])));
+}
+
+/** XP que vale una revisión: 2 por ejercicio bien y 5 más si están todos bien. */
 export function xpRevision(revisiones: RevisionEjercicio[]): number {
   const bien = revisiones.filter((r) => r.estado === 'bien').length;
-  return bien * XP_FOTO + (bien === revisiones.length ? XP_HOJA_PERFECTA : 0);
+  return bien * XP_BIEN + (bien === revisiones.length ? XP_HOJA_PERFECTA : 0);
 }

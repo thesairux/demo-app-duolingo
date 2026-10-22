@@ -2,7 +2,20 @@
 import { readdirSync, readFileSync } from 'node:fs';
 
 const CARPETA = new URL('../src/content/', import.meta.url);
-const TIPOS = ['seleccion_multiple', 'verdadero_falso', 'completar', 'unir_pares', 'ordenar', 'caso_practico', 'identificar_error', 'clasificar'];
+const TIPOS = [
+  'seleccion_multiple',
+  'verdadero_falso',
+  'completar',
+  'unir_pares',
+  'ordenar',
+  'caso_practico',
+  'identificar_error',
+  'clasificar',
+  'recta_numerica',
+  'reloj',
+  'fraccion_visual',
+  'bloques',
+];
 /** Máximo de palabras por campo, para que se lea en un celular sin esfuerzo. */
 const MAX = { enunciado: 20, caso: 35, alternativa: 9, explicacion: 35, tarjeta: 35, ejemplo: 25, definicion: 35 };
 
@@ -87,6 +100,29 @@ function ejercicio(e, u, l, ids) {
       alternativas(e.elementos.map((el) => el.texto), 'un elemento');
       break;
     }
+    case 'recta_numerica': {
+      const { min, max, paso, etiquetaCada, respuesta } = e;
+      if (![min, max, paso, respuesta].every((n) => typeof n === 'number') || !(paso > 0) || !(max > min)) return avisar(donde, 'la recta necesita min < max, paso > 0 y respuesta');
+      const rayitas = (max - min) / paso;
+      if (Math.abs(rayitas - Math.round(rayitas)) > 1e-9 || rayitas < 4 || rayitas > 20) avisar(donde, `entre min y max deben caber de 4 a 20 rayitas (hay ${rayitas})`);
+      const lugar = (respuesta - min) / paso;
+      if (Math.abs(lugar - Math.round(lugar)) > 1e-9 || respuesta <= min || respuesta > max) avisar(donde, 'la respuesta debe caer en una rayita, después de min y hasta max');
+      if (!Number.isInteger(etiquetaCada) || etiquetaCada < 1) avisar(donde, 'etiquetaCada debe ser un entero de 1 o más');
+      break;
+    }
+    case 'reloj':
+      if (!Number.isInteger(e.hora) || e.hora < 1 || e.hora > 12) avisar(donde, 'la hora debe ser de 1 a 12');
+      if (!Number.isInteger(e.minutos) || e.minutos < 0 || e.minutos > 55 || e.minutos % 5) avisar(donde, 'los minutos deben ser múltiplo de 5, de 0 a 55');
+      if (e.hora === 12 && e.minutos === 0) avisar(donde, 'el reloj parte en las 12:00, así que esa hora no sirve como respuesta');
+      break;
+    case 'fraccion_visual':
+      if (!['circulo', 'barra'].includes(e.figura)) avisar(donde, 'la figura debe ser "circulo" o "barra"');
+      if (!Number.isInteger(e.partes) || e.partes < 2 || e.partes > 12) avisar(donde, 'las partes deben ser de 2 a 12');
+      if (!Number.isInteger(e.respuesta) || e.respuesta < 1 || e.respuesta > e.partes) avisar(donde, 'la respuesta debe ser de 1 a la cantidad de partes');
+      break;
+    case 'bloques':
+      if (!Number.isInteger(e.respuesta) || e.respuesta < 1 || e.respuesta > 9999) avisar(donde, 'el número a armar debe ser de 1 a 9.999');
+      break;
   }
 }
 

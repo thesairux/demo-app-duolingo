@@ -281,6 +281,40 @@
             "fueraDelMaterial": false
           },
           "revisar": false
+        },
+        {
+          "id": "u1-l1-e11",
+          "unidad": 1,
+          "leccion": 1,
+          "tipo": "bloques",
+          "dificultad": 1,
+          "concepto": "leer-numeros",
+          "enunciado": "Arma el 2.315 con bloques.",
+          "respuesta": 2315,
+          "explicacion": "2.315 tiene 2 unidades de mil, 3 centenas, 1 decena y 5 unidades: 2 cubos de mil, 3 placas de cien, 1 barra de diez y 5 cubitos.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l1-e12",
+          "unidad": 1,
+          "leccion": 1,
+          "tipo": "bloques",
+          "dificultad": 2,
+          "concepto": "leer-numeros",
+          "enunciado": "Arma «cuatro mil sesenta» con bloques.",
+          "respuesta": 4060,
+          "explicacion": "Cuatro mil sesenta se escribe 4.060: 4 cubos de mil, ninguna placa de cien, 6 barras de diez y ningún cubito.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
         }
       ]
     },
@@ -576,6 +610,40 @@
             "fueraDelMaterial": false
           },
           "revisar": false
+        },
+        {
+          "id": "u1-l2-e11",
+          "unidad": 1,
+          "leccion": 2,
+          "tipo": "bloques",
+          "dificultad": 1,
+          "concepto": "valor-posicional",
+          "enunciado": "Arma el número que tiene 3 unidades de mil, 5 centenas y 7 unidades.",
+          "respuesta": 3507,
+          "explicacion": "3 unidades de mil, 5 centenas, 0 decenas y 7 unidades forman el 3.507. No van barras de diez.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l2-e12",
+          "unidad": 1,
+          "leccion": 2,
+          "tipo": "bloques",
+          "dificultad": 2,
+          "concepto": "valor-posicional",
+          "enunciado": "Arma 6.000 + 200 + 40 + 9 con bloques.",
+          "respuesta": 6249,
+          "explicacion": "6.000 + 200 + 40 + 9 = 6.249: 6 cubos de mil, 2 placas de cien, 4 barras de diez y 9 cubitos.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
         }
       ]
     },
@@ -857,6 +925,48 @@
           ],
           "respuesta": 0,
           "explicacion": "1.204 < 1.240 < 1.420. De menor a mayor: 4° C, 4° A y 4° B.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l3-e11",
+          "unidad": 1,
+          "leccion": 3,
+          "tipo": "recta_numerica",
+          "dificultad": 1,
+          "concepto": "comparar-numeros",
+          "enunciado": "Arrastra el punto hasta el 7.000.",
+          "min": 0,
+          "max": 10000,
+          "paso": 1000,
+          "etiquetaCada": 5,
+          "respuesta": 7000,
+          "explicacion": "Cada rayita vale 1.000. Desde el 5.000, dos rayitas más a la derecha está el 7.000.",
+          "fuente": {
+            "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
+            "seccion": "OA 1",
+            "fueraDelMaterial": false
+          },
+          "revisar": false
+        },
+        {
+          "id": "u1-l3-e12",
+          "unidad": 1,
+          "leccion": 3,
+          "tipo": "recta_numerica",
+          "dificultad": 2,
+          "concepto": "comparar-numeros",
+          "enunciado": "Arrastra el punto hasta el 4.300.",
+          "min": 4000,
+          "max": 5000,
+          "paso": 100,
+          "etiquetaCada": 5,
+          "respuesta": 4300,
+          "explicacion": "Aquí cada rayita vale 100. El 4.300 está 3 rayitas después del 4.000.",
           "fuente": {
             "archivo": "Bases Curriculares Matemática 4° básico (Mineduc)",
             "seccion": "OA 1",

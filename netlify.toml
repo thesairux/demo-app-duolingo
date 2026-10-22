@@ -1,8 +1,0 @@
-# Para que funcione la revisión con foto en tu propio sitio: conecta este repositorio en Netlify (arrastrar la carpeta
-# dist no publica el corrector) y agrega la variable ANTHROPIC_API_KEY en Project configuration → Environment variables.
-[build]
-  command = "npm run build"
-  publish = "dist"
-
-[functions]
-  directory = "netlify/functions"

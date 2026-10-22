@@ -56,7 +56,7 @@ export interface Contadores {
   legendarias: number;
   checkpointsAprobados: number;
   cofresAbiertos: number;
-  /** Hojas del cuaderno revisadas (con foto o por el propio niño). */
+  /** Hojas del cuaderno revisadas. */
   cuadernos: number;
 }
 
@@ -80,6 +80,8 @@ export interface EstadoJuego {
   contadores: Contadores;
   tienda: Tienda;
   ajustes: { sonido: boolean; animaciones: boolean };
+  /** Mejor puntaje en el desafío relámpago (cálculos correctos en 60 segundos). */
+  mejorDesafio: number;
 }
 
 export interface Tienda {
@@ -135,6 +137,7 @@ export function estadoInicial(ahora: number): EstadoJuego {
     contadores: { ...CONTADORES_INICIALES },
     tienda: { ...TIENDA_INICIAL, atuendo: { ...ATUENDO_INICIAL } },
     ajustes: { sonido: true, animaciones: true },
+    mejorDesafio: 0,
   };
 }
 
@@ -318,39 +321,53 @@ export function aplicarSesion(estado: EstadoJuego, r: ResultadoSesion, ahora: nu
   };
 }
 
-export interface EfectosCuaderno {
+export interface EfectosActividad {
   xpGanada: number;
   xpHoy: number;
   metaCumplidaHoy: boolean;
   rachaExtendida: boolean;
   gemas: { motivo: string; gemas: number }[];
   logrosNuevos: Logro[];
+  /** true si el desafío relámpago superó el récord anterior. */
+  record: boolean;
+}
+
+export interface ResultadoActividad {
+  xp: number;
+  /** Si cuenta como práctica del día para la racha. */
+  practica: boolean;
+  /** Una hoja del cuaderno revisada por primera vez. */
+  hojaCuaderno?: boolean;
+  /** Cálculos correctos en un desafío relámpago. */
+  puntajeDesafio?: number;
 }
 
 /**
- * Suma lo ganado con una hoja del cuaderno. `nuevaHoja` es true la primera vez que se revisa esa hoja:
- * solo entonces cuenta para la racha y para el logro, así revisarla de nuevo no se aprovecha dos veces.
+ * Suma lo ganado en una actividad fuera de las lecciones: una hoja del cuaderno o un desafío relámpago.
+ * Una hoja solo cuenta para la racha y el logro la primera vez que se revisa, así revisarla de nuevo no se aprovecha dos veces.
  */
-export function aplicarCuaderno(estado: EstadoJuego, r: { xp: number; nuevaHoja: boolean }, ahora: number): { estado: EstadoJuego; efectos: EfectosCuaderno } {
+export function aplicarActividad(estado: EstadoJuego, r: ResultadoActividad, ahora: number): { estado: EstadoJuego; efectos: EfectosActividad } {
   const hoy = claveDia(new Date(ahora));
   const meta = estado.perfil?.metaDiaria ?? 20;
   const xpAntes = estado.xpPorDia[hoy] ?? 0;
   const xpGanada = r.xp + (dobleXPActivo(estado, ahora) ? r.xp : 0);
   const xpHoy = xpAntes + xpGanada;
   const metaCumplidaHoy = xpAntes < meta && xpHoy >= meta;
-  const gemas: EfectosCuaderno['gemas'] = metaCumplidaHoy ? [{ motivo: 'Meta diaria cumplida', gemas: GEMAS.metaDiaria }] : [];
-  const practica = r.nuevaHoja ? registrarPractica(estado.racha, hoy) : { racha: estado.racha, extendida: false };
+  const gemas: EfectosActividad['gemas'] = metaCumplidaHoy ? [{ motivo: 'Meta diaria cumplida', gemas: GEMAS.metaDiaria }] : [];
+  const practica = r.practica ? registrarPractica(estado.racha, hoy) : { racha: estado.racha, extendida: false };
+  const record = r.puntajeDesafio !== undefined && r.puntajeDesafio > estado.mejorDesafio;
   const intermedio: EstadoJuego = {
     ...estado,
     xpTotal: estado.xpTotal + xpGanada,
     xpPorDia: { ...estado.xpPorDia, [hoy]: xpHoy },
     racha: practica.racha,
     gemas: estado.gemas + gemas.reduce((s, g) => s + g.gemas, 0),
-    contadores: { ...estado.contadores, cuadernos: estado.contadores.cuadernos + (r.nuevaHoja ? 1 : 0) },
+    contadores: { ...estado.contadores, cuadernos: estado.contadores.cuadernos + (r.hojaCuaderno ? 1 : 0) },
+    mejorDesafio: record ? r.puntajeDesafio! : estado.mejorDesafio,
   };
   const { estado: final, nuevos } = otorgarLogros(intermedio, hoy);
   for (const l of nuevos) gemas.push({ motivo: `Logro: ${l.titulo}`, gemas: l.gemas });
-  return { estado: final, efectos: { xpGanada, xpHoy, metaCumplidaHoy, rachaExtendida: practica.extendida, gemas, logrosNuevos: nuevos } };
+  return { estado: final, efectos: { xpGanada, xpHoy, metaCumplidaHoy, rachaExtendida: practica.extendida, gemas, logrosNuevos: nuevos, record } };
 }
 
 /** Un cofre se puede abrir cuando la lección anterior a él tiene al menos una corona. */

@@ -42,7 +42,7 @@ La hora, las medidas, el perímetro y el área. Y también los ángulos y la sim
 | 2 | Medir: perímetro y área | Usar metros, centímetros y milímetros, y calcular el perímetro y el área de un rectángulo. | OA 22 y OA 23 | m, cm y mm, El perímetro, El área |
 | 3 | Ángulos y simetría | Reconocer ángulos rectos, agudos y obtusos, y figuras simétricas. | OA 17 y OA 19 | Los ángulos, El transportador, Simetría |
 
-Cada lección tiene 10 preguntas (5 fáciles, 3 medias y 2 problemas de la vida real) y 3 tarjetas de resumen. En total hay 120 preguntas y 27 palabras en el glosario.
+Cada lección tiene 10 preguntas base (5 fáciles, 3 medias y 2 problemas de la vida real), varias tienen además preguntas interactivas, y todas tienen 3 tarjetas de resumen. En total hay 135 preguntas y 27 palabras en el glosario.
 
 ## Objetivos de aprendizaje usados
 
@@ -64,9 +64,31 @@ Cada lección tiene 10 preguntas (5 fáciles, 3 medias y 2 problemas de la vida 
 
 Quedan fuera de esta demo, y se pueden agregar como unidades nuevas: patrones y ecuaciones (OA 13 y 14), ubicación en cuadrículas (OA 15), vistas de cuerpos 3D (OA 16), transformaciones (OA 18), volumen (OA 24) y datos y probabilidades (OA 25 a 27).
 
+## Preguntas interactivas
+
+Además de las preguntas de alternativas, completar, pares y otras, el banco tiene 15 preguntas que se responden manipulando algo en la pantalla:
+
+| Tipo | Dónde aparece | Qué hace el niño |
+|---|---|---|
+| Recta numérica | Comparar y ordenar (2), Décimos y centésimos (1) | Arrastra un punto hasta 7.000, 4.300 o 0,7 |
+| Reloj | La hora y el tiempo (3), Ángulos y simetría (1) | Mueve los punteros a las 3:00, 7:30, 16:45 y 9:00 |
+| Pintar la fracción | ¿Qué es una fracción? (2), Comparar y sumar fracciones (1), Décimos y centésimos (1) | Pinta 3/8 de una pizza, 2/5 y 0,3 de una barra, y el resultado de 2/6 + 3/6 |
+| Bloques | Leer y escribir números (2), Valor posicional (2) | Arma 2.315, 4.060, 3.507 y 6.249 con bloques de mil, cien, diez y uno |
+
+## Desafío relámpago
+
+Cálculo mental durante 60 segundos (OA 2), en 4 niveles que suben cada 4 aciertos:
+
+| Nivel | Cálculos |
+|---|---|
+| 0 | Tablas del 2 al 5, sumas de decenas (30 + 40), × 10 |
+| 1 | Tablas del 2 al 9, restas de decenas, × 10 con números de 2 cifras, dobles |
+| 2 | Tablas del 3 al 9, divisiones de las tablas, mitades, × 100, sumas de decenas |
+| 3 | Todo mezclado, más sumas como 340 + 60 |
+
 ## Resuelve en tu cuaderno
 
-Hojas de 4 ejercicios que se generan al azar cada vez (`src/lib/cuaderno.ts`), para resolver con lápiz y revisar con una foto.
+Hojas de 4 ejercicios que se generan al azar cada vez (`src/lib/cuaderno.ts`), para resolver con lápiz y escribir los resultados en la app.
 
 | Tema | Ejercicios | OA |
 |---|---|---|
@@ -76,7 +98,7 @@ Hojas de 4 ejercicios que se generan al azar cada vez (`src/lib/cuaderno.ts`), p
 | Fracciones | 2 sumas y 2 restas con igual denominador (4, 5, 6, 8, 10 o 12) | OA 9 |
 | De todo un poco | Una suma o resta, una multiplicación, una división y una fracción | OA 3, 5, 6 y 9 |
 
-Claude solo transcribe el resultado que escribió el niño; la app lo compara con la respuesta calculada. Se aceptan el punto de los miles (1.012), el resto escrito de varias formas («9 resto 5», «9 y sobran 5») y las fracciones equivalentes (10/16 por 5/8).
+La app acepta el punto de los miles (1.012) y las fracciones equivalentes (10/16 por 5/8). Si en una división falta el resto, avisa que le faltó anotarlo.
 
 ## Decisiones del proyecto
 
@@ -85,5 +107,5 @@ Claude solo transcribe el resultado que escribió el niño; la app lo compara co
 - **Formato corto:** 4 unidades de 3 lecciones, con un cofre después de la lección 2 y un checkpoint al final de cada unidad. La lección «Problemas con dinero» se dibuja como nodo especial.
 - **Escritura chilena:** punto para los miles (4.325), coma decimal (0,25), dinero en pesos ($1.000) y el signo «:» para dividir.
 - **Lenguaje para 9 y 10 años:** frases cortas, contextos del colegio y la casa (once, paseo de curso, diario mural) y apoyos visuales con emojis cuando ayudan (🟦🟦🟦⬜).
-- **Sin datos personales:** solo un apodo opcional; todo se guarda en el navegador. La foto del cuaderno se envía a Claude solo para leer las respuestas.
-- **Claude lee, la app corrige:** en la revisión con foto, Claude no decide si un ejercicio está bien; solo dice qué número escribió el niño. Así la corrección es exacta y se puede probar.
+- **Sin datos personales ni servidor:** solo un apodo opcional; todo se guarda en el navegador y la app no usa ninguna API.
+- **Interactivo sin perder el motor:** las preguntas de recta, reloj, fracciones y bloques son tipos de pregunta más, así que usan las mismas vidas, coronas, repaso y modo examen que el resto.
