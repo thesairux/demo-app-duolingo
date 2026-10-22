@@ -8,6 +8,7 @@ Está construida sobre el mismo motor que [Lexi Laboral](https://github.com/thes
 - Antes de cada lección, un resumen rápido de 3 tarjetas.
 - Cada nivel tiene solo 5 preguntas, para que den ganas de terminarlo.
 - 8 tipos de pregunta, coronas, vidas, racha, gemas, tienda, logros, repaso inteligente y modo examen.
+- **Resuelve en tu cuaderno:** hojas de 4 ejercicios para hacer con lápiz. El niño le saca una foto a su cuaderno, Claude lee lo que escribió y la app corrige cada ejercicio y muestra cómo se hace el que quedó mal.
 
 ## Cómo correrla
 
@@ -38,6 +39,36 @@ Después abre la dirección que aparece en la terminal (normalmente http://local
 
 Las rutas son relativas, así que `dist/` también funciona dentro de una subcarpeta de cualquier hosting. La app es una PWA: desde el celular se puede instalar en la pantalla de inicio y funciona sin internet después de abrirla una vez.
 
+Publicada así (arrastrando `dist`), todo funciona menos la revisión con foto del cuaderno: en su lugar aparece «Revisar yo mismo». Para activarla, mira la sección siguiente.
+
+## Resuelve en tu cuaderno (revisión con foto)
+
+Está en **Practicar → Resuelve en tu cuaderno** y en un acceso directo arriba del camino.
+
+1. El niño elige un tema: sumas y restas hasta 1.000, multiplicaciones por 1 cifra, divisiones (algunas con resto), fracciones con igual denominador o de todo un poco.
+2. La app arma al azar 4 ejercicios. El niño los copia en su cuaderno, los resuelve y encierra cada resultado en un círculo.
+3. Toca **Sacar foto al cuaderno**: en el celular se abre la cámara. También puede elegir una foto guardada.
+4. Claude **solo lee** lo que escribió en cada ejercicio. La corrección la hace la app comparando con la respuesta exacta, así que no hay errores de cálculo. Los que quedaron mal muestran cómo se resuelven; los que no se pudieron leer piden otra foto.
+5. Gana 2 XP por ejercicio bien y 5 más si la hoja sale perfecta. Volver a sacar foto después de corregir solo suma lo que mejoró. Revisar 3 hojas da el logro «Cuaderno estrella».
+
+Si no hay quién lea la foto, la pantalla ofrece **Revisar yo mismo**: muestra las respuestas y cómo se hacen, y el niño marca cuáles le salieron igual (1 XP cada una).
+
+Quién lee la foto depende de dónde se abra la app:
+
+| Dónde | Cómo se lee la foto |
+|---|---|
+| Demo publicada en claude.ai | Con Claude, usando la cuenta de quien abre la demo. La primera vez pide permiso. |
+| Tu sitio en Netlify, conectado al repositorio | Con el corrector `netlify/functions/corregir.mts`, que llama a la API de Claude con tu clave. |
+| Netlify Drop, `npm run preview` u otro hosting | No hay corrector: solo «Revisar yo mismo». |
+
+Para activar el corrector en tu sitio:
+
+1. Crea una clave en [console.anthropic.com](https://console.anthropic.com) (API keys).
+2. Sube este proyecto a un repositorio de GitHub y, en Netlify, usa **Add new project → Import an existing project** con ese repositorio. `netlify.toml` ya trae el comando de compilación, la carpeta `dist` y la carpeta de funciones.
+3. En **Project configuration → Environment variables**, agrega `ANTHROPIC_API_KEY` con tu clave y vuelve a publicar.
+
+La app detecta sola el corrector en `/api/corregir` (si lo publicas en otra dirección, compila con `VITE_CORRECTOR_URL=...`). Usa el modelo `claude-opus-5-5`, con respuesta en formato JSON fijo y con reintento automático en otro modelo si los filtros de seguridad rechazan una foto (`fallbacks: "default"`). Cada foto revisada es una llamada a la API que se cobra en tu cuenta de Anthropic. La dirección del corrector es pública: cualquiera que tenga el enlace de la app puede usarla, así que conviene fijar un límite de gasto en la consola de Anthropic. El corrector solo acepta enunciados con números y signos, y fotos de hasta unos 4,5 MB.
+
 ## Qué hay en cada carpeta
 
 | Carpeta | Contenido |
@@ -49,6 +80,7 @@ Las rutas son relativas, así que `dist/` también funciona dentro de una subcar
 | `src/screens/` | Pantallas: bienvenida, camino, resumen, sesión, resultado, practicar, logros, tienda y perfil |
 | `public/` | Íconos de la app y `manifest.webmanifest` (instalación como app) |
 | `scripts/` | `validar-contenido.mjs`, `iconos.mjs` y la plantilla del service worker (`sw.js`) |
+| `netlify/functions/` | `corregir.mts`: el corrector que lee las fotos del cuaderno con la API de Claude |
 | `TEMARIO.md` | Temario, objetivos de aprendizaje y decisiones del proyecto |
 
 ## Reglas del juego
@@ -69,7 +101,9 @@ En **Perfil → Ajustes** se cambia la meta diaria, se silencian los sonidos, se
 
 ### Privacidad
 
-Todo se guarda solo en el navegador de cada dispositivo (`localStorage`). No hay cuentas, servidor, anuncios ni compras. Solo se pide un apodo opcional.
+Todo se guarda solo en el navegador de cada dispositivo (`localStorage`). No hay cuentas, anuncios ni compras. Solo se pide un apodo opcional.
+
+La única excepción es la revisión con foto: la foto del cuaderno se envía a Claude para leer las respuestas. La app no la guarda ni la manda a ningún otro lado, y antes de sacarla le recuerda al niño que no salgan caras ni nombres.
 
 ## Adaptarla a otra asignatura
 

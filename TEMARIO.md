@@ -64,6 +64,20 @@ Cada lección tiene 10 preguntas (5 fáciles, 3 medias y 2 problemas de la vida 
 
 Quedan fuera de esta demo, y se pueden agregar como unidades nuevas: patrones y ecuaciones (OA 13 y 14), ubicación en cuadrículas (OA 15), vistas de cuerpos 3D (OA 16), transformaciones (OA 18), volumen (OA 24) y datos y probabilidades (OA 25 a 27).
 
+## Resuelve en tu cuaderno
+
+Hojas de 4 ejercicios que se generan al azar cada vez (`src/lib/cuaderno.ts`), para resolver con lápiz y revisar con una foto.
+
+| Tema | Ejercicios | OA |
+|---|---|---|
+| Sumas y restas | 2 sumas y 2 restas con resultados hasta 1.000 | OA 3 |
+| Multiplicaciones | 2 de 2 cifras × 1 cifra y 2 de 3 cifras × 1 cifra | OA 5 |
+| Divisiones | Dividendo de 2 cifras y divisor de 1 cifra: 2 exactas y 2 con resto | OA 6 |
+| Fracciones | 2 sumas y 2 restas con igual denominador (4, 5, 6, 8, 10 o 12) | OA 9 |
+| De todo un poco | Una suma o resta, una multiplicación, una división y una fracción | OA 3, 5, 6 y 9 |
+
+Claude solo transcribe el resultado que escribió el niño; la app lo compara con la respuesta calculada. Se aceptan el punto de los miles (1.012), el resto escrito de varias formas («9 resto 5», «9 y sobran 5») y las fracciones equivalentes (10/16 por 5/8).
+
 ## Decisiones del proyecto
 
 - **Mismo motor, otra piel.** La lógica del juego (coronas, vidas, racha, repaso, examen, tienda y logros) es la de Lexi Laboral sin cambios. Solo cambian la marca, la mascota, las frases, los nombres de los logros y de la tienda, y el banco de preguntas.
@@ -71,4 +85,5 @@ Quedan fuera de esta demo, y se pueden agregar como unidades nuevas: patrones y 
 - **Formato corto:** 4 unidades de 3 lecciones, con un cofre después de la lección 2 y un checkpoint al final de cada unidad. La lección «Problemas con dinero» se dibuja como nodo especial.
 - **Escritura chilena:** punto para los miles (4.325), coma decimal (0,25), dinero en pesos ($1.000) y el signo «:» para dividir.
 - **Lenguaje para 9 y 10 años:** frases cortas, contextos del colegio y la casa (once, paseo de curso, diario mural) y apoyos visuales con emojis cuando ayudan (🟦🟦🟦⬜).
-- **Sin datos personales:** solo un apodo opcional; todo se guarda en el navegador.
+- **Sin datos personales:** solo un apodo opcional; todo se guarda en el navegador. La foto del cuaderno se envía a Claude solo para leer las respuestas.
+- **Claude lee, la app corrige:** en la revisión con foto, Claude no decide si un ejercicio está bien; solo dice qué número escribió el niño. Así la corrección es exacta y se puede probar.

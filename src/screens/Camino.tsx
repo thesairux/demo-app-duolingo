@@ -5,7 +5,7 @@ import { Boton } from '../components/Boton';
 import { CofreAnimado, type FaseCofre } from '../components/CofreAnimado';
 import { Confeti } from '../components/Confeti';
 import { Hoja } from '../components/Hoja';
-import { IconoCorona, IconoGema } from '../components/Iconos';
+import { IconoCamara, IconoCorona, IconoGema } from '../components/Iconos';
 import { Numi, type Expresion } from '../components/Numi';
 import { NodoEspecial, NodoLeccion, type EstadoEspecial } from '../components/NodoCamino';
 import { LECCIONES, leccionesDeUnidad, UNIDADES, type LeccionUbicada } from '../content';
@@ -31,7 +31,8 @@ export const NIVELES = ['Lo básico', 'Un poco más', 'Problemas de la vida real
 export type AccionCamino =
   | { tipo: 'leccion' | 'guia' | 'repaso' | 'legendario'; leccionId: string }
   | { tipo: 'checkpoint'; unidad: number }
-  | { tipo: 'practicar' };
+  | { tipo: 'practicar' }
+  | { tipo: 'cuaderno' };
 
 function colorUnidad(n: number): CSSProperties {
   return { '--unidad': `var(--u${n})`, '--unidad-oscuro': `color-mix(in srgb, var(--u${n}) 62%, #000)` } as CSSProperties;
@@ -109,6 +110,20 @@ export function Camino({ onAccion }: { onAccion: (accion: AccionCamino) => void 
             )}
           </div>
         </section>
+
+        <button
+          type="button"
+          onClick={() => onAccion({ tipo: 'cuaderno' })}
+          className="opcion grid grid-cols-[44px_minmax(0,1fr)] items-center gap-3 rounded-[22px] px-4 py-3 text-left"
+        >
+          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-select-soft text-select">
+            <IconoCamara className="h-6 w-6" />
+          </span>
+          <span className="grid gap-0.5">
+            <span className="font-display text-lg font-semibold leading-tight">Resuelve en tu cuaderno</span>
+            <span className="text-sm font-semibold text-muted">Haz ejercicios con lápiz y sácales una foto: Numi revisa si están bien.</span>
+          </span>
+        </button>
 
         {UNIDADES.map((unidad) => {
           const deUnidad = leccionesDeUnidad(unidad.unidad);

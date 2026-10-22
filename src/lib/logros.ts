@@ -36,6 +36,7 @@ export const LOGROS: Logro[] = [
   { id: 'casos-100', titulo: 'Cien problemas', descripcion: 'Resuelve bien 100 problemas.', gemas: 120, icono: 'maletin', progreso: (e) => contar(e.contadores.casosResueltos, 100) },
   { id: 'xp-500', titulo: '500 XP', descripcion: 'Junta 500 XP en total.', gemas: 30, icono: 'rayo', progreso: (e) => contar(e.xpTotal, 500) },
   { id: 'xp-2000', titulo: '2.000 XP', descripcion: 'Junta 2.000 XP en total.', gemas: 100, icono: 'rayo', progreso: (e) => contar(e.xpTotal, 2000) },
+  { id: 'cuaderno-3', titulo: 'Cuaderno estrella', descripcion: 'Revisa 3 hojas de ejercicios de tu cuaderno.', gemas: 30, icono: 'libro', progreso: (e) => contar(e.contadores.cuadernos, 3) },
   { id: 'repaso-5', titulo: 'Repaso al día', descripcion: 'Completa 5 repasos.', gemas: 30, icono: 'libro', progreso: (e) => contar(e.contadores.repasos, 5) },
   { id: 'checkpoint', titulo: 'Me salté la fila', descripcion: 'Aprueba un checkpoint de unidad.', gemas: 40, icono: 'trofeo', progreso: (e) => contar(e.contadores.checkpointsAprobados, 1) },
   { id: 'legendaria', titulo: 'Leyenda de los números', descripcion: 'Supera un desafío legendario.', gemas: 50, icono: 'corona', progreso: (e) => contar(e.contadores.legendarias, 1) },

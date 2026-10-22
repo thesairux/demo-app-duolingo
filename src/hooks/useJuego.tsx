@@ -3,12 +3,14 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import { borrarEstado, cargarEstado, guardarEstado } from '../lib/almacen';
 import {
   abrirCofre as abrirCofreLib,
+  aplicarCuaderno,
   aplicarSesion,
   comprar as comprarLib,
   estadoInicial,
   quitarAccesorio as quitarAccesorioLib,
   usarComodin as usarComodinLib,
   type Articulo,
+  type EfectosCuaderno,
   type EfectosSesion,
   type EstadoJuego,
   type MetaDiaria,
@@ -25,6 +27,8 @@ interface ContextoJuego {
   cambiarMeta: (metaDiaria: MetaDiaria) => void;
   perderVida: () => number;
   terminarSesion: (resultado: ResultadoSesion) => EfectosSesion;
+  /** Suma la XP de una hoja del cuaderno revisada. */
+  terminarCuaderno: (xp: number, nuevaHoja: boolean) => EfectosCuaderno;
   abrirCofre: (unidad: number) => { gemas: number; logrosNuevos: Logro[] };
   comprar: (articulo: Articulo) => string | undefined;
   quitarAccesorio: (ranura: Ranura) => void;
@@ -93,6 +97,15 @@ export function ProveedorJuego({ children }: { children: ReactNode }) {
     [actualizar],
   );
 
+  const terminarCuaderno = useCallback(
+    (xp: number, nuevaHoja: boolean) => {
+      const { estado: nuevo, efectos } = aplicarCuaderno(ref.current, { xp, nuevaHoja }, Date.now());
+      actualizar(nuevo);
+      return efectos;
+    },
+    [actualizar],
+  );
+
   const abrirCofre = useCallback(
     (unidad: number) => {
       const r = abrirCofreLib(ref.current, unidad, Date.now());
@@ -135,8 +148,22 @@ export function ProveedorJuego({ children }: { children: ReactNode }) {
   }, [actualizar]);
 
   const valor = useMemo(
-    () => ({ estado, crearPerfil, cambiarMeta, perderVida, terminarSesion, abrirCofre, comprar, quitarAccesorio, usarComodin, alternarSonido, alternarAnimaciones, reiniciar }),
-    [estado, crearPerfil, cambiarMeta, perderVida, terminarSesion, abrirCofre, comprar, quitarAccesorio, usarComodin, alternarSonido, alternarAnimaciones, reiniciar],
+    () => ({
+      estado,
+      crearPerfil,
+      cambiarMeta,
+      perderVida,
+      terminarSesion,
+      terminarCuaderno,
+      abrirCofre,
+      comprar,
+      quitarAccesorio,
+      usarComodin,
+      alternarSonido,
+      alternarAnimaciones,
+      reiniciar,
+    }),
+    [estado, crearPerfil, cambiarMeta, perderVida, terminarSesion, terminarCuaderno, abrirCofre, comprar, quitarAccesorio, usarComodin, alternarSonido, alternarAnimaciones, reiniciar],
   );
   return <Contexto.Provider value={valor}>{children}</Contexto.Provider>;
 }

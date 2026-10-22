@@ -56,6 +56,8 @@ export interface Contadores {
   legendarias: number;
   checkpointsAprobados: number;
   cofresAbiertos: number;
+  /** Hojas del cuaderno revisadas (con foto o por el propio niño). */
+  cuadernos: number;
 }
 
 export interface EstadoJuego {
@@ -112,6 +114,7 @@ export const CONTADORES_INICIALES: Contadores = {
   legendarias: 0,
   checkpointsAprobados: 0,
   cofresAbiertos: 0,
+  cuadernos: 0,
 };
 
 export function estadoInicial(ahora: number): EstadoJuego {
@@ -313,6 +316,41 @@ export function aplicarSesion(estado: EstadoJuego, r: ResultadoSesion, ahora: nu
       logrosNuevos: nuevos,
     },
   };
+}
+
+export interface EfectosCuaderno {
+  xpGanada: number;
+  xpHoy: number;
+  metaCumplidaHoy: boolean;
+  rachaExtendida: boolean;
+  gemas: { motivo: string; gemas: number }[];
+  logrosNuevos: Logro[];
+}
+
+/**
+ * Suma lo ganado con una hoja del cuaderno. `nuevaHoja` es true la primera vez que se revisa esa hoja:
+ * solo entonces cuenta para la racha y para el logro, así revisarla de nuevo no se aprovecha dos veces.
+ */
+export function aplicarCuaderno(estado: EstadoJuego, r: { xp: number; nuevaHoja: boolean }, ahora: number): { estado: EstadoJuego; efectos: EfectosCuaderno } {
+  const hoy = claveDia(new Date(ahora));
+  const meta = estado.perfil?.metaDiaria ?? 20;
+  const xpAntes = estado.xpPorDia[hoy] ?? 0;
+  const xpGanada = r.xp + (dobleXPActivo(estado, ahora) ? r.xp : 0);
+  const xpHoy = xpAntes + xpGanada;
+  const metaCumplidaHoy = xpAntes < meta && xpHoy >= meta;
+  const gemas: EfectosCuaderno['gemas'] = metaCumplidaHoy ? [{ motivo: 'Meta diaria cumplida', gemas: GEMAS.metaDiaria }] : [];
+  const practica = r.nuevaHoja ? registrarPractica(estado.racha, hoy) : { racha: estado.racha, extendida: false };
+  const intermedio: EstadoJuego = {
+    ...estado,
+    xpTotal: estado.xpTotal + xpGanada,
+    xpPorDia: { ...estado.xpPorDia, [hoy]: xpHoy },
+    racha: practica.racha,
+    gemas: estado.gemas + gemas.reduce((s, g) => s + g.gemas, 0),
+    contadores: { ...estado.contadores, cuadernos: estado.contadores.cuadernos + (r.nuevaHoja ? 1 : 0) },
+  };
+  const { estado: final, nuevos } = otorgarLogros(intermedio, hoy);
+  for (const l of nuevos) gemas.push({ motivo: `Logro: ${l.titulo}`, gemas: l.gemas });
+  return { estado: final, efectos: { xpGanada, xpHoy, metaCumplidaHoy, rachaExtendida: practica.extendida, gemas, logrosNuevos: nuevos } };
 }
 
 /** Un cofre se puede abrir cuando la lección anterior a él tiene al menos una corona. */
