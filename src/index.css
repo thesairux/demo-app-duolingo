@@ -32,11 +32,13 @@
   --u4: #11998d;
   --u5: #d6457c;
   --u6: #4f6478;
-  --nm-fur: #9c6236;
-  --nm-light: #edcda3;
-  --nm-dark: #3a2416;
-  --nm-ear: #7a4826;
-  --nm-tail: #5b381d;
+  /* Numi, el búho: plumas, disco facial y guata, contornos, alas y penachos, pico y patas, iris. */
+  --nm-fur: #8e5f3d;
+  --nm-light: #f2e1c2;
+  --nm-dark: #30221a;
+  --nm-ear: #6a4329;
+  --nm-beak: #f39a1e;
+  --nm-iris: #ffcf3a;
   --nm-hat: #f5b400;
   --nm-hat-d: #d69200;
   --nm-hat-l: #ffd660;

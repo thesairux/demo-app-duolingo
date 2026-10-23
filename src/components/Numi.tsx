@@ -1,4 +1,4 @@
-// Numi: castora con birrete y un libro de números. Diseño original en SVG.
+// Numi: búho con birrete y un libro de números. Diseño original en SVG.
 import { motion } from 'framer-motion';
 import type { CSSProperties, ReactNode } from 'react';
 import { useJuego } from '../hooks/useJuego';
@@ -13,26 +13,36 @@ function Trazo({ d, ancho = 3.2 }: { d: string; ancho?: number }) {
   return <path d={d} fill="none" stroke={OSCURO} strokeWidth={ancho} strokeLinecap="round" />;
 }
 
+/** Ojo abierto de búho: iris amarillo grande, pupila y brillo. */
 function Ojo({ x, y, r = 6.5, dx = 0, dy = 0 }: { x: number; y: number; r?: number; dx?: number; dy?: number }) {
   return (
     <>
-      <ellipse cx={x} cy={y} rx={r - 0.6} ry={r + 0.6} fill={OSCURO} />
-      <circle cx={x + 2 + dx} cy={y - 3 + dy} r={2.2} fill="#fff" />
+      <circle cx={x} cy={y} r={12.5} fill="var(--nm-iris)" stroke={OSCURO} strokeWidth="1.8" />
+      <ellipse cx={x + dx} cy={y + dy} rx={r - 0.6} ry={r + 0.6} fill={OSCURO} />
+      <circle cx={x + 2.4 + dx} cy={y - 3 + dy} r={2.3} fill="#fff" />
     </>
   );
 }
 
-const LABIO_FELIZ = 'M86 108 Q93 114 100 107 Q107 114 114 108';
-const LABIO_PLANO = 'M87 109 Q100 104 113 109';
-const BRAZO_NORMAL = <ellipse cx="148" cy="152" rx="11" ry="20" transform="rotate(18 148 152)" fill="var(--nm-fur)" />;
+/** Un ala con forma de gota: la punta redonda va en el hombro y la punta fina es el extremo del ala. */
+function Ala({ x, y, giro }: { x: number; y: number; giro: number }) {
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${giro})`}>
+      <path d="M0 -24 C12 -23 15 -5 11 8 C8 17 3 23 0 26 C-3 23 -8 17 -11 8 C-15 -5 -12 -23 0 -24 Z" fill="var(--nm-ear)" />
+      <path d="M-7 -6 Q0 0 7 -6 M-6 5 Q0 11 6 5" fill="none" stroke={OSCURO} strokeOpacity=".28" strokeWidth="2" strokeLinecap="round" />
+    </g>
+  );
+}
+
+const ALA_NORMAL = <Ala x={152} y={157} giro={-16} />;
 const TEXTO_ZETA = { fontFamily: 'Fredoka, Nunito, sans-serif', fontWeight: 700, fill: 'var(--muted)' } as const;
 
 interface Partes {
   ojos: ReactNode;
   cejas?: ReactNode;
-  labio: string;
-  boca?: ReactNode;
-  brazo: ReactNode;
+  pico: 'cerrado' | 'abierto';
+  /** El ala derecha: quieta, saludando o en la barbilla. */
+  ala: ReactNode;
   extra?: ReactNode;
 }
 
@@ -42,15 +52,14 @@ function partes(expresion: Expresion): Partes {
       return {
         ojos: (
           <>
-            <Trazo d="M75 90 Q82 80 89 90" ancho={4} />
-            <Trazo d="M111 90 Q118 80 125 90" ancho={4} />
+            <Trazo d="M73 92 Q82 81 91 92" ancho={4} />
+            <Trazo d="M109 92 Q118 81 127 92" ancho={4} />
           </>
         ),
-        labio: LABIO_FELIZ,
-        boca: <path d="M90 117 Q100 135 110 117 Z" fill="#B5473A" />,
-        brazo: (
+        pico: 'abierto',
+        ala: (
           <g className="numi-saludo">
-            <ellipse cx="157" cy="112" rx="11" ry="22" transform="rotate(38 157 112)" fill="var(--nm-fur)" />
+            <Ala x={161} y={114} giro={-140} />
           </g>
         ),
         extra: (
@@ -74,22 +83,21 @@ function partes(expresion: Expresion): Partes {
       return {
         ojos: (
           <>
-            <Ojo x={82} y={91} r={5.5} dy={1} />
-            <Ojo x={118} y={91} r={5.5} dy={1} />
+            <Ojo x={82} y={90} r={5.2} dy={2.5} />
+            <Ojo x={118} y={90} r={5.2} dy={2.5} />
           </>
         ),
         cejas: (
           <>
-            <Trazo d="M72 80 L89 74" ancho={3.4} />
-            <Trazo d="M128 80 L111 74" ancho={3.4} />
+            <Trazo d="M70 79 L89 72" ancho={3.4} />
+            <Trazo d="M130 79 L111 72" ancho={3.4} />
           </>
         ),
-        labio: LABIO_PLANO,
-        boca: <Trazo d="M90 128 Q100 120 110 128" ancho={3} />,
-        brazo: BRAZO_NORMAL,
+        pico: 'cerrado',
+        ala: ALA_NORMAL,
         extra: (
           <g className="numi-gota">
-            <path d="M84 98 Q79 106 84 109 Q89 106 84 98 Z" fill="#7CC4F2" />
+            <path d="M72 101 Q67 109 72 112 Q77 109 72 101 Z" fill="#7CC4F2" />
           </g>
         ),
       };
@@ -97,14 +105,13 @@ function partes(expresion: Expresion): Partes {
       return {
         ojos: (
           <>
-            <Ojo x={82} y={88} dx={1.5} dy={-2} />
-            <Ojo x={118} y={88} dx={1.5} dy={-2} />
+            <Ojo x={82} y={90} dx={2.5} dy={-3} />
+            <Ojo x={118} y={90} dx={2.5} dy={-3} />
           </>
         ),
-        cejas: <Trazo d="M110 75 Q118 69 127 73" ancho={3.4} />,
-        labio: LABIO_PLANO,
-        boca: <Trazo d="M95 125 Q102 123 108 126" ancho={3} />,
-        brazo: <ellipse cx="124" cy="130" rx="10" ry="17" transform="rotate(-50 124 130)" fill="var(--nm-fur)" />,
+        cejas: <Trazo d="M109 74 Q118 68 128 72" ancho={3.4} />,
+        pico: 'cerrado',
+        ala: <Ala x={125} y={129} giro={118} />,
         extra: (
           <g className="numi-flota">
             <circle cx="150" cy="56" r="4" fill="var(--surface)" stroke="var(--line-deep)" strokeWidth="2" />
@@ -120,22 +127,21 @@ function partes(expresion: Expresion): Partes {
       return {
         ojos: (
           <>
-            <Ojo x={82} y={89} r={7.6} />
-            <Ojo x={118} y={89} r={7.6} />
+            <Ojo x={82} y={90} r={7.8} />
+            <Ojo x={118} y={90} r={7.8} />
           </>
         ),
         cejas: (
           <>
-            <Trazo d="M71 78 L89 71" ancho={3.4} />
-            <Trazo d="M129 78 L111 71" ancho={3.4} />
+            <Trazo d="M69 78 L89 71" ancho={3.4} />
+            <Trazo d="M131 78 L111 71" ancho={3.4} />
           </>
         ),
-        labio: LABIO_PLANO,
-        boca: <Trazo d="M88 126 Q94 121 100 126 Q106 131 112 126" ancho={3} />,
-        brazo: BRAZO_NORMAL,
+        pico: 'cerrado',
+        ala: ALA_NORMAL,
         extra: (
           <g className="numi-gota" style={{ animationDuration: '1.6s' }}>
-            <path d="M152 64 Q145 75 152 80 Q159 75 152 64 Z" fill="#7CC4F2" />
+            <path d="M156 70 Q149 81 156 86 Q163 81 156 70 Z" fill="#7CC4F2" />
           </g>
         ),
       };
@@ -143,13 +149,12 @@ function partes(expresion: Expresion): Partes {
       return {
         ojos: (
           <>
-            <Trazo d="M75 89 Q82 94 89 89" ancho={3.6} />
-            <Trazo d="M111 89 Q118 94 125 89" ancho={3.6} />
+            <Trazo d="M73 91 Q82 97 91 91" ancho={3.6} />
+            <Trazo d="M109 91 Q118 97 127 91" ancho={3.6} />
           </>
         ),
-        labio: LABIO_PLANO,
-        boca: <ellipse cx="100" cy="125" rx="4" ry="3" fill={OSCURO} />,
-        brazo: BRAZO_NORMAL,
+        pico: 'cerrado',
+        ala: ALA_NORMAL,
         extra: (
           <>
             {[
@@ -170,15 +175,45 @@ function partes(expresion: Expresion): Partes {
       return {
         ojos: (
           <>
-            <Ojo x={82} y={88} />
-            <Ojo x={118} y={88} />
+            <Ojo x={82} y={90} />
+            <Ojo x={118} y={90} />
           </>
         ),
-        labio: LABIO_FELIZ,
-        brazo: BRAZO_NORMAL,
+        pico: 'cerrado',
+        ala: ALA_NORMAL,
       };
   }
 }
+
+function Pico({ abierto }: { abierto: boolean }) {
+  if (!abierto) {
+    return (
+      <g>
+        <path d="M92 103 Q100 99 108 103 L101.5 116 Q100 118 98.5 116 Z" fill="var(--nm-beak)" />
+        <path d="M95 104 Q100 102 103 103.5" fill="none" stroke="#fff" strokeOpacity=".55" strokeWidth="1.8" strokeLinecap="round" />
+      </g>
+    );
+  }
+  return (
+    <g>
+      <ellipse cx="100" cy="112" rx="6" ry="5" fill="#B5473A" />
+      <path d="M92 102 Q100 98 108 102 L101.5 110 Q100 112 98.5 110 Z" fill="var(--nm-beak)" />
+      <path d="M94.5 114 L105.5 114 L100.8 121 Q100 122 99.2 121 Z" fill="var(--nm-beak)" />
+    </g>
+  );
+}
+
+/** Plumas en forma de «v» sobre la guata. */
+const PLUMAS = [
+  [88, 152],
+  [112, 152],
+  [100, 164],
+  [80, 172],
+  [120, 172],
+  [92, 184],
+  [108, 184],
+  [100, 196],
+];
 
 // ---------- Accesorios de la tienda ----------
 
@@ -188,10 +223,10 @@ function Lentes({ sol }: { sol: boolean }) {
   return (
     <g>
       {[82, 118].map((x) => (
-        <circle key={x} cx={x} cy={88} r={11} fill={sol ? MARCO : '#BFE3FF'} fillOpacity={sol ? 0.92 : 0.28} stroke={MARCO} strokeWidth={3} />
+        <circle key={x} cx={x} cy={90} r={15} fill={sol ? MARCO : '#BFE3FF'} fillOpacity={sol ? 0.92 : 0.28} stroke={MARCO} strokeWidth={3} />
       ))}
-      {sol && <path d="M75 84 Q79 80 84 81 M111 84 Q115 80 120 81" stroke="#fff" strokeOpacity=".7" strokeWidth="2" strokeLinecap="round" fill="none" />}
-      <path d="M93 87 Q100 83 107 87 M71 86 L57 81 M129 86 L143 81" stroke={MARCO} strokeWidth={3} strokeLinecap="round" fill="none" />
+      {sol && <path d="M73 85 Q77 80 83 81 M109 85 Q113 80 119 81" stroke="#fff" strokeOpacity=".7" strokeWidth="2" strokeLinecap="round" fill="none" />}
+      <path d="M97 89 Q100 86 103 89 M67 88 L54 83 M133 88 L146 83" stroke={MARCO} strokeWidth={3} strokeLinecap="round" fill="none" />
     </g>
   );
 }
@@ -236,9 +271,9 @@ function Chaleco() {
 function Antiparras() {
   return (
     <g>
-      <path d="M66 88 L53 84 M134 88 L147 84" stroke="#2B3A55" strokeWidth={5} strokeLinecap="round" />
-      <rect x="66" y="77" width="68" height="23" rx="11" fill="#BFE3FF" fillOpacity=".35" stroke="#FF8C1A" strokeWidth={3.5} />
-      <path d="M74 84 Q78 80 84 80 M108 84 Q112 80 118 80" stroke="#fff" strokeOpacity=".8" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M63 90 L50 86 M137 90 L150 86" stroke="#2B3A55" strokeWidth={5} strokeLinecap="round" />
+      <rect x="63" y="75" width="74" height="30" rx="14" fill="#BFE3FF" fillOpacity=".35" stroke="#FF8C1A" strokeWidth={3.5} />
+      <path d="M71 84 Q75 79 82 79 M107 84 Q111 79 118 79" stroke="#fff" strokeOpacity=".8" strokeWidth="2" strokeLinecap="round" fill="none" />
     </g>
   );
 }
@@ -249,10 +284,10 @@ function LentesCorazon() {
   return (
     <g>
       {[82, 118].map((x) => (
-        <path key={x} d={CORAZON} transform={`translate(${x} 88)`} fill="#E2508C" fillOpacity=".85" stroke="#B33669" strokeWidth={2.5} strokeLinejoin="round" />
+        <path key={x} d={CORAZON} transform={`translate(${x} 91) scale(1.35)`} fill="#E2508C" fillOpacity=".85" stroke="#B33669" strokeWidth={2} strokeLinejoin="round" />
       ))}
-      <path d="M74 84 Q76 80 80 80 M110 84 Q112 80 116 80" stroke="#fff" strokeOpacity=".8" strokeWidth="2" strokeLinecap="round" fill="none" />
-      <path d="M95 84 Q100 80 105 84 M69 84 L57 80 M131 84 L143 80" stroke="#B33669" strokeWidth={2.5} strokeLinecap="round" fill="none" />
+      <path d="M71 85 Q73 80 78 80 M107 85 Q109 80 114 80" stroke="#fff" strokeOpacity=".8" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M97 86 Q100 83 103 86 M65 86 L54 82 M135 86 L146 82" stroke="#B33669" strokeWidth={2.5} strokeLinecap="round" fill="none" />
     </g>
   );
 }
@@ -260,9 +295,9 @@ function LentesCorazon() {
 function Lentes3D() {
   return (
     <g>
-      <rect x="69" y="79" width="26" height="18" rx="3" fill="#E53935" fillOpacity=".8" stroke="#F4F6F8" strokeWidth={3.5} />
-      <rect x="105" y="79" width="26" height="18" rx="3" fill="#00B8D4" fillOpacity=".8" stroke="#F4F6F8" strokeWidth={3.5} />
-      <path d="M95 86 H105 M69 85 L57 81 M131 85 L143 81" stroke="#F4F6F8" strokeWidth={3.5} strokeLinecap="round" fill="none" />
+      <rect x="65" y="78" width="31" height="24" rx="3" fill="#E53935" fillOpacity=".8" stroke="#F4F6F8" strokeWidth={3.5} />
+      <rect x="104" y="78" width="31" height="24" rx="3" fill="#00B8D4" fillOpacity=".8" stroke="#F4F6F8" strokeWidth={3.5} />
+      <path d="M96 88 H104 M65 87 L54 83 M135 87 L146 83" stroke="#F4F6F8" strokeWidth={3.5} strokeLinecap="round" fill="none" />
     </g>
   );
 }
@@ -270,9 +305,9 @@ function Lentes3D() {
 function Monoculo() {
   return (
     <g>
-      <path d="M126 96 Q142 112 130 134" stroke="#C99700" strokeWidth={2} strokeDasharray="2 2.5" fill="none" />
-      <circle cx="118" cy="88" r="11.5" fill="#BFE3FF" fillOpacity=".3" stroke="#E0A800" strokeWidth={3} />
-      <path d="M111 84 Q114 80 119 80" stroke="#fff" strokeOpacity=".8" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M129 100 Q146 116 132 138" stroke="#C99700" strokeWidth={2} strokeDasharray="2 2.5" fill="none" />
+      <circle cx="118" cy="90" r="15" fill="#BFE3FF" fillOpacity=".3" stroke="#E0A800" strokeWidth={3} />
+      <path d="M109 85 Q113 80 119 80" stroke="#fff" strokeOpacity=".8" strokeWidth="2" strokeLinecap="round" fill="none" />
     </g>
   );
 }
@@ -459,7 +494,7 @@ function Accesorio({ id }: { id: IdAccesorio | null }) {
 interface Props {
   expresion?: Expresion;
   className?: string;
-  /** Texto para lectores de pantalla. Si falta, Numi se trata como decorativa. */
+  /** Texto para lectores de pantalla. Si falta, Numi se trata como decorativo. */
   etiqueta?: string;
   /** Para probarle ropa en la tienda; si falta, usa lo que tiene puesto. */
   atuendo?: Partial<Atuendo>;
@@ -487,39 +522,41 @@ export function Numi({ expresion = 'feliz', className = '', etiqueta, atuendo }:
       {/* El color del libro va en este grupo y no en el <svg>: framer-motion no actualiza variables CSS en su style. */}
       <g className={expresion === 'celebrando' ? 'numi-salto' : 'numi-respira'} style={colorLibro ? ({ '--nm-book': colorLibro } as CSSProperties) : undefined}>
         {puesto.ropa === 'capa' && <CapaDetras />}
-        {/* cola */}
-        <ellipse cx="152" cy="196" rx="31" ry="13" transform="rotate(-28 152 196)" fill="var(--nm-tail)" />
-        <path d="M134 196 L166 186 M138 206 L172 194" stroke="#000" strokeOpacity=".18" strokeWidth="2" fill="none" />
-        {/* orejas */}
-        <circle cx="53" cy="77" r="11" fill="var(--nm-fur)" />
-        <circle cx="53" cy="77" r="5.5" fill="var(--nm-ear)" />
-        <circle cx="147" cy="77" r="11" fill="var(--nm-fur)" />
-        <circle cx="147" cy="77" r="5.5" fill="var(--nm-ear)" />
-        {/* cuerpo */}
+        {/* penachos: las "orejas" de plumas asoman bajo el birrete */}
+        <path d="M64 64 L34 50 L80 50 Z" fill="var(--nm-ear)" strokeLinejoin="round" />
+        <path d="M136 64 L166 50 L120 50 Z" fill="var(--nm-ear)" strokeLinejoin="round" />
+        {/* ala izquierda, detrás del libro */}
+        <Ala x={50} y={158} giro={14} />
+        {/* cuerpo, guata con plumas y patas */}
         <ellipse cx="100" cy="160" rx="56" ry="52" fill="var(--nm-fur)" />
-        <ellipse cx="100" cy="170" rx="34" ry="34" fill="var(--nm-light)" />
+        <ellipse cx="100" cy="172" rx="36" ry="36" fill="var(--nm-light)" />
+        {PLUMAS.map(([x, y]) => (
+          <path key={`${x}-${y}`} d={`M${x - 5} ${y - 2} Q${x} ${y + 4} ${x + 5} ${y - 2}`} fill="none" stroke="var(--nm-ear)" strokeOpacity=".5" strokeWidth="2" strokeLinecap="round" />
+        ))}
         <Accesorio id={puesto.ropa} />
-        <ellipse cx="78" cy="210" rx="17" ry="8" fill="var(--nm-ear)" />
-        <ellipse cx="122" cy="210" rx="17" ry="8" fill="var(--nm-ear)" />
-        {/* cabeza y birrete */}
-        <circle cx="100" cy="92" r="48" fill="var(--nm-fur)" />
+        {[86, 114].map((x) => (
+          <g key={x} fill="var(--nm-beak)">
+            <ellipse cx={x - 6} cy="210" rx="3.6" ry="6" />
+            <ellipse cx={x} cy="211" rx="3.6" ry="6.5" />
+            <ellipse cx={x + 6} cy="210" rx="3.6" ry="6" />
+          </g>
+        ))}
+        {/* cabeza y disco facial */}
+        <circle cx="100" cy="92" r="50" fill="var(--nm-fur)" />
+        <circle cx="82" cy="93" r="21" fill="var(--nm-light)" />
+        <circle cx="118" cy="93" r="21" fill="var(--nm-light)" />
+        <circle cx="66" cy="111" r="6" fill="var(--nm-cheek)" opacity=".5" />
+        <circle cx="134" cy="111" r="6" fill="var(--nm-cheek)" opacity=".5" />
+        <g className={parpadea ? 'numi-ojos' : undefined}>{p.ojos}</g>
+        {p.cejas}
+        <Pico abierto={p.pico === 'abierto'} />
+        {/* birrete: va encima de la cabeza y tapa el borde de arriba del disco facial */}
         <path d="M62 66 Q62 50 100 48 Q138 50 138 66 Q100 75 62 66 Z" fill="var(--nm-hat-d)" />
         <path d="M100 20 L166 41 L100 62 L34 41 Z" fill="var(--nm-hat)" />
         <path d="M34 41 L100 62 L166 41" fill="none" stroke="var(--nm-hat-d)" strokeWidth="3" strokeLinejoin="round" />
         <path d="M100 41 Q138 46 154 46 V72" fill="none" stroke="var(--nm-hat-d)" strokeWidth="3" strokeLinecap="round" />
         <circle cx="100" cy="41" r="4.5" fill="var(--nm-hat-d)" />
         <path d="M149 70 H159 L161 86 Q154 89 147 86 Z" fill="var(--nm-hat-d)" />
-        {/* cara */}
-        <circle cx="71" cy="107" r="7.5" fill="var(--nm-cheek)" opacity=".55" />
-        <circle cx="129" cy="107" r="7.5" fill="var(--nm-cheek)" opacity=".55" />
-        <ellipse cx="100" cy="111" rx="24" ry="16" fill="var(--nm-light)" />
-        <g className={parpadea ? 'numi-ojos' : undefined}>{p.ojos}</g>
-        {p.cejas}
-        <ellipse cx="100" cy="101" rx="8" ry="5.5" fill={OSCURO} />
-        <Trazo d={p.labio} ancho={3} />
-        {p.boca}
-        <rect x="94" y="108" width="6" height="10" rx="1.5" fill="#fff" stroke={OSCURO} strokeWidth="1.2" />
-        <rect x="100" y="108" width="6" height="10" rx="1.5" fill="#fff" stroke={OSCURO} strokeWidth="1.2" />
         <Accesorio id={puesto.cara} />
         <Accesorio id={puesto.cuello} />
         {/* libro de números */}
@@ -533,8 +570,9 @@ export function Numi({ expresion = 'feliz', className = '', etiqueta, atuendo }:
             +÷
           </text>
         </g>
-        <ellipse cx="86" cy="160" rx="10" ry="18" transform="rotate(28 86 160)" fill="var(--nm-fur)" />
-        {p.brazo}
+        {/* punta del ala que sujeta el libro */}
+        <ellipse cx="87" cy="161" rx="9" ry="16" transform="rotate(28 87 161)" fill="var(--nm-ear)" />
+        {p.ala}
         {p.extra}
       </g>
     </motion.svg>

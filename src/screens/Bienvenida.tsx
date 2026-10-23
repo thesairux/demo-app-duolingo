@@ -26,7 +26,7 @@ export function Bienvenida() {
             <p className="absolute left-0 top-0 max-w-[260px] rounded-2xl border-2 border-line bg-surface px-4 py-3 font-extrabold leading-snug">
               ¡Hola! Soy Numi. Te voy a acompañar a practicar matemática jugando.
             </p>
-            <Numi expresion="feliz" className="h-auto w-52" etiqueta="Numi, una castora con birrete y un libro de números" />
+            <Numi expresion="feliz" className="h-auto w-52" etiqueta="Numi, un búho con birrete y un libro de números" />
           </div>
           <div className="grid gap-2">
             <p className="w-fit rounded-full bg-select-soft px-3 py-1 text-xs font-black uppercase tracking-[.1em] text-select">Demo · Matemática 4° básico</p>

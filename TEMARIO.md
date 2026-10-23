@@ -103,7 +103,7 @@ La app acepta el punto de los miles (1.012) y las fracciones equivalentes (10/16
 ## Decisiones del proyecto
 
 - **Mismo motor, otra piel.** La lógica del juego (coronas, vidas, racha, repaso, examen, tienda y logros) es la de Lexi Laboral sin cambios. Solo cambian la marca, la mascota, las frases, los nombres de los logros y de la tienda, y el banco de preguntas.
-- **Mascota:** Numi, una castora con birrete y un libro con «123 +÷». En la tienda se cambian los colores del birrete y la ropa.
+- **Mascota:** Numi, un búho con birrete y un libro con «123 +÷». En la tienda se cambian los colores del birrete y la ropa.
 - **Formato corto:** 4 unidades de 3 lecciones, con un cofre después de la lección 2 y un checkpoint al final de cada unidad. La lección «Problemas con dinero» se dibuja como nodo especial.
 - **Escritura chilena:** punto para los miles (4.325), coma decimal (0,25), dinero en pesos ($1.000) y el signo «:» para dividir.
 - **Lenguaje para 9 y 10 años:** frases cortas, contextos del colegio y la casa (once, paseo de curso, diario mural) y apoyos visuales con emojis cuando ayudan (🟦🟦🟦⬜).

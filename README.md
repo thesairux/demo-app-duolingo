@@ -1,6 +1,6 @@
 # Numi Mates · Demo
 
-Demo de catálogo: una app con mecánicas de juego (estilo Duolingo) para practicar la **Matemática de 4° básico**. Los niños y niñas de 9 y 10 años juegan desde el celular o el computador con la ayuda de Numi, una castora con birrete y un libro de números.
+Demo de catálogo: una app con mecánicas de juego (estilo Duolingo) para practicar la **Matemática de 4° básico**. Los niños y niñas de 9 y 10 años juegan desde el celular o el computador con la ayuda de Numi, un búho con birrete y un libro de números.
 
 Está construida sobre el mismo motor que [Lexi Laboral](https://github.com/thesairux/lexi-laboral): solo cambian la marca, la mascota y el contenido. Por eso sirve para mostrar que **el mismo juego se adapta a cualquier asignatura, curso o tema**.
 
